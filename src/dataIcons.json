@@ -1,17 +1,1 @@
-{
-  "data": [
-    { "name": "add", "category": "outline", "urlSrc": "/svg/outline/add.svg", "metadata": ["add", "more", "più"] },
-    {
-      "name": "heart",
-      "category": "solid",
-      "urlSrc": "/svg/solid/heart.svg",
-      "metadata": ["love", "cuore", "heart", "amore"]
-    },
-    {
-      "name": "heart",
-      "category": "outline",
-      "urlSrc": "/svg/outline/heart.svg",
-      "metadata": ["love", "cuore", "heart"]
-    }
-  ]
-}
+{"data": [{"name":"add","category":"outline","urlSrc":"/svg/outline/add.svg"},{"name":"heart","category":"outline","urlSrc":"/svg/outline/heart.svg"},{"name":"heart","category":"solid","urlSrc":"/svg/solid/heart.svg"}]}

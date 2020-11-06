@@ -32,9 +32,7 @@ interface Props {
 const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc }) => {
   const { onOpenSnackbar } = React.useContext(SnackbarContext);
 
-  console.log(iconUrlSrc);
-
-  const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main${iconUrlSrc}`;
+  const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
 
   return (
     <AnimatePresence>
