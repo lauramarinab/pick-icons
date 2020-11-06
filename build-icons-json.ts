@@ -2,7 +2,7 @@ import { differenceBy } from "lodash";
 
 const fs = require("fs");
 
-type ImportedIcon = { name: string; urlSrc: string; category: Array<string> };
+type ImportedIcon = { name: string; urlSrc: string; category: Array<string>; metadata: Array<string> };
 
 const getRemovedHiddenFile = (file: string) => !/^\./.test(file);
 
