@@ -30,8 +30,6 @@ const getAllIcons = (dirNames: Array<string>) => {
 
 const allIcons = getAllIcons(subDirectories);
 
-const generateJson = `{"data": ${JSON.stringify(allIcons)}}`;
-
 try {
   fs.readFile("./src/dataIcons.json", (err: any, data: Buffer) => {
     const oldIcons: Array<ImportedIcon> = JSON.parse(data.toString()).data;

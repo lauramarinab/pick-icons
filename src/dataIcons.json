@@ -12,6 +12,7 @@
       "category": ["solid"],
       "urlSrc": "/svg/solid/bookmark.svg",
       "metadata": ["bookmark", "segnalibro"]
-    }
+    },
+    { "name": "heart", "category": ["solid"], "urlSrc": "/svg/solid/heart.svg", "metadata": [] }
   ]
 }
