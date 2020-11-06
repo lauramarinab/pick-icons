@@ -26,13 +26,13 @@ const downloadBlob = (blob: Blob, filename: string) => {
 
 interface Props {
   visible: boolean;
-  filename: string;
+  iconUrlSrc: string;
 }
 
-const DownloadButton: React.FC<Props> = ({ visible, filename }) => {
+const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc }) => {
   const { onOpenSnackbar } = React.useContext(SnackbarContext);
 
-  const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public/svg/${filename}`;
+  const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/${iconUrlSrc}`;
 
   return (
     <AnimatePresence>
@@ -53,7 +53,7 @@ const DownloadButton: React.FC<Props> = ({ visible, filename }) => {
                 onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
               } else {
                 const blob = new Blob([xhr.response], { type: "svg" });
-                downloadBlob(blob, filename);
+                downloadBlob(blob, iconUrlSrc);
                 onOpenSnackbar("notification", "WoW! Thanks.");
               }
             };

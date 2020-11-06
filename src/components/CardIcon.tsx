@@ -27,12 +27,17 @@ const Icon = styled.img`
   -webkit-user-drag: none;
 `;
 
-const CardIcon: React.FC<{ iconPath: string; iconName: string }> = ({ iconPath, iconName }) => {
+interface Props {
+  iconUrlSrc: string;
+  iconName: string;
+}
+
+const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName }) => {
   const [hover, setHover] = React.useState(false);
 
   return (
     <Wrapper onMouseEnter={(_) => setHover(true)} onMouseLeave={(_) => setHover(false)}>
-      <Icon src={iconPath} alt={"This Icon calls " + iconName} />
+      <Icon src={iconUrlSrc} alt={"This Icon calls " + iconName} />
       <h5
         css={css`
           font-weight: 400;
@@ -42,7 +47,7 @@ const CardIcon: React.FC<{ iconPath: string; iconName: string }> = ({ iconPath, 
       >
         {iconName}
       </h5>
-      <DownloadButton visible={hover} filename={iconName} />
+      <DownloadButton visible={hover} iconUrlSrc={iconUrlSrc} />
     </Wrapper>
   );
 };

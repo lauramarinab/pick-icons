@@ -1,4 +1,6 @@
 export type Icon = {
   name: string;
-  path: string;
+  urlSrc: string;
+  metadata?: Array<string>;
+  category?: string;
 };

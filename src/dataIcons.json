@@ -1,1 +1,17 @@
-{"data": [{"icon":"add.svg"},{"icon":"arrow-down.svg"},{"icon":"arrow-downward.svg"},{"icon":"arrow-drop-down.svg"},{"icon":"arrow-drop-up.svg"},{"icon":"arrow-left.svg"},{"icon":"arrow-right.svg"},{"icon":"arrow-up.svg"},{"icon":"barchart.svg"},{"icon":"bookmark-full.svg"},{"icon":"bookmark-outline.svg"},{"icon":"chart.svg"},{"icon":"check.svg"},{"icon":"close.svg"},{"icon":"comments.svg"},{"icon":"delete.svg"},{"icon":"download.svg"},{"icon":"edit.svg"},{"icon":"expand.svg"},{"icon":"favorite.svg"},{"icon":"filter-list.svg"},{"icon":"heart-full.svg"},{"icon":"heart.svg"},{"icon":"help.svg"},{"icon":"hidden.svg"},{"icon":"info.svg"},{"icon":"label.svg"},{"icon":"link.svg"},{"icon":"logout.svg"},{"icon":"media.svg"},{"icon":"menu.svg"},{"icon":"more-horiz.svg"},{"icon":"more-vert.svg"},{"icon":"move-to.svg"},{"icon":"open-link.svg"},{"icon":"play.svg"},{"icon":"reduce.svg"},{"icon":"remove.svg"},{"icon":"replace.svg"},{"icon":"reply.svg"},{"icon":"save.svg"},{"icon":"search.svg"},{"icon":"show.svg"},{"icon":"sidebar-moderation.svg"},{"icon":"sidebar-posts.svg"},{"icon":"update.svg"},{"icon":"upload.svg"}]}
+{
+  "data": [
+    { "name": "add", "category": "outline", "urlSrc": "/svg/outline/add.svg", "metadata": ["add", "more", "più"] },
+    {
+      "name": "heart",
+      "category": "solid",
+      "urlSrc": "/svg/solid/heart.svg",
+      "metadata": ["love", "cuore", "heart", "amore"]
+    },
+    {
+      "name": "heart",
+      "category": "outline",
+      "urlSrc": "/svg/outline/heart.svg",
+      "metadata": ["love", "cuore", "heart"]
+    }
+  ]
+}

@@ -25,7 +25,7 @@ const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
       `}
     >
       {filteredIcons.map((icon, i) => {
-        return <CardIcon key={i} iconName={icon.name} iconPath={icon.path} />;
+        return <CardIcon key={i} iconName={icon.name} iconUrlSrc={icon.urlSrc} />;
       })}
     </div>
   );

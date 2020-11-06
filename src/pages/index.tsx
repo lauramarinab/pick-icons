@@ -7,21 +7,18 @@ import { Snackbar } from "../components/Snackbar";
 import { SearchProvider } from "../providers/SearchProvider";
 import { SnackbarProvider } from "../providers/SnackbarProvider";
 import { Icon } from "../types/Icon";
-
-const icons: Array<Icon> = dataIcons.data.map((icon) => {
-  return {
-    name: icon.icon,
-    path: `/svg/${icon.icon}`,
-  };
-});
+import { flatMap } from "lodash";
 
 const Homepage = () => {
+  const icons = dataIcons.data;
+  const iconsNumber = flatMap(icons).length;
+
   return (
     <SnackbarProvider>
       <SearchProvider>
         <Snackbar />
         <div>
-          <Header iconsNumber={icons.length} />
+          <Header iconsNumber={iconsNumber} />
           <SearchBar />
           <ListIcons icons={icons} />
         </div>
