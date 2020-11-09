@@ -25,13 +25,14 @@ const getAllIcons = (dirNames: Array<string>) => {
 
     const icons = files.map((filename: string) => {
       const filenameWithoutExtension = filename.replace(".svg", "");
-      const iconName = filenameWithoutExtension.replace("-", " ");
+      const iconName = filenameWithoutExtension.replace(/-/g, " ");
+
       return {
         name: iconName,
         filename: `${filenameWithoutExtension}-${dirName}.svg`,
         category: [dirName],
         urlSrc: `/svg/${dirName}/${filename}`,
-        metadata: [iconName],
+        metadata: [filenameWithoutExtension],
       };
     });
 
