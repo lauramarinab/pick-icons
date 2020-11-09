@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import { SnackbarContext } from "../../providers/SnackbarProvider";
 import { gradient } from "../../variables";
+import { downloadIconGAEvent } from "utils/gtag";
 
 const Button = styled(motion.div)`
   ${gradient};
@@ -18,7 +19,7 @@ const Button = styled(motion.div)`
 const downloadBlob = (blob: Blob, filename: string) => {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  console.log(filename);
+
   a.href = url;
   a.download = filename || "download";
   a.click();
@@ -44,6 +45,8 @@ const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
           exit={{ bottom: "-10%" }}
           transition={{ duration: 0.2 }}
           onClick={() => {
+            const gaEvent = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
+            downloadIconGAEvent(gaEvent);
             const xhr = new XMLHttpRequest();
 
             xhr.open("GET", downloadUrl);
