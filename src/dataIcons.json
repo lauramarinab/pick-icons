@@ -5,7 +5,7 @@
       "name": "heart",
       "category": ["outline"],
       "urlSrc": "/svg/outline/heart.svg",
-      "metadata": ["love", "cuore", "heart"]
+      "metadata": ["love", "cuore", "heart", "amore"]
     },
     {
       "name": "bookmark",
@@ -13,6 +13,11 @@
       "urlSrc": "/svg/solid/bookmark.svg",
       "metadata": ["bookmark", "segnalibro"]
     },
-    { "name": "heart", "category": ["solid"], "urlSrc": "/svg/solid/heart.svg", "metadata": [] }
+    {
+      "name": "heart",
+      "category": ["solid"],
+      "urlSrc": "/svg/solid/heart.svg",
+      "metadata": ["love", "cuore", "heart", "amore"]
+    }
   ]
 }

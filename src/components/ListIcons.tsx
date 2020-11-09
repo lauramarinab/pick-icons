@@ -8,7 +8,10 @@ import { NoIconFound } from "./ui/NoIconFound";
 const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
   const { value } = React.useContext(SearchContext);
 
-  const filteredIcons = icons.filter((icon) => icon.name.includes(value));
+  let filteredIcons: Array<Icon> = icons;
+  if (value.length > 0) {
+    filteredIcons = icons.filter((icon) => icon.metadata.find((m) => m.includes(value.toLowerCase())));
+  }
 
   if (filteredIcons.length === 0) {
     return <NoIconFound />;
