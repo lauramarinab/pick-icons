@@ -30,9 +30,10 @@ const Icon = styled.img`
 interface Props {
   iconUrlSrc: string;
   iconName: string;
+  filename: string;
 }
 
-const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName }) => {
+const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
   const [hover, setHover] = React.useState(false);
 
   return (
@@ -47,7 +48,7 @@ const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName }) => {
       >
         {iconName}
       </h5>
-      <DownloadButton visible={hover} iconUrlSrc={iconUrlSrc} />
+      <DownloadButton visible={hover} iconUrlSrc={iconUrlSrc} filename={filename} />
     </Wrapper>
   );
 };

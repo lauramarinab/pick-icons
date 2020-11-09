@@ -18,7 +18,7 @@ const Button = styled(motion.div)`
 const downloadBlob = (blob: Blob, filename: string) => {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-
+  console.log(filename);
   a.href = url;
   a.download = filename || "download";
   a.click();
@@ -27,9 +27,10 @@ const downloadBlob = (blob: Blob, filename: string) => {
 interface Props {
   visible: boolean;
   iconUrlSrc: string;
+  filename: string;
 }
 
-const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc }) => {
+const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
   const { onOpenSnackbar } = React.useContext(SnackbarContext);
 
   const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
@@ -53,13 +54,13 @@ const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc }) => {
                 onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
               } else {
                 const blob = new Blob([xhr.response], { type: "svg" });
-                downloadBlob(blob, iconUrlSrc);
+                downloadBlob(blob, filename);
                 onOpenSnackbar("notification", "WoW! Thanks.");
               }
             };
           }}
         >
-          Download
+          Download SVG
         </Button>
       )}
     </AnimatePresence>

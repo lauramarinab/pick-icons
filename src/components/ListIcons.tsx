@@ -4,13 +4,16 @@ import { CardIcon } from "./CardIcon";
 import { Icon } from "../types/Icon";
 import { SearchContext } from "../providers/SearchProvider";
 import { NoIconFound } from "./ui/NoIconFound";
+import { orderBy } from "lodash";
 
 const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
   const { value } = React.useContext(SearchContext);
 
-  let filteredIcons: Array<Icon> = icons;
+  const orderedIcons = orderBy(icons, "filename");
+
+  let filteredIcons: Array<Icon> = orderedIcons;
   if (value.length > 0) {
-    filteredIcons = icons.filter((icon) => icon.metadata.find((m) => m.includes(value.toLowerCase())));
+    filteredIcons = orderedIcons.filter((icon) => icon.metadata.find((m) => m.includes(value.toLowerCase())));
   }
 
   if (filteredIcons.length === 0) {
@@ -28,7 +31,7 @@ const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
       `}
     >
       {filteredIcons.map((icon, i) => {
-        return <CardIcon key={i} iconName={icon.name} iconUrlSrc={icon.urlSrc} />;
+        return <CardIcon key={i} iconName={icon.name} iconUrlSrc={icon.urlSrc} filename={icon.filename} />;
       })}
     </div>
   );

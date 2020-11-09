@@ -2,7 +2,13 @@ import { differenceBy } from "lodash";
 
 const fs = require("fs");
 
-type ImportedIcon = { name: string; urlSrc: string; category: Array<string>; metadata: Array<string> };
+type ImportedIcon = {
+  name: string;
+  filename: string;
+  urlSrc: string;
+  category: Array<string>;
+  metadata: Array<string>;
+};
 
 const getRemovedHiddenFile = (file: string) => !/^\./.test(file);
 
@@ -18,8 +24,15 @@ const getAllIcons = (dirNames: Array<string>) => {
     const files: Array<string> = fs.readdirSync(path).filter(getRemovedHiddenFile);
 
     const icons = files.map((filename: string) => {
-      const iconName = filename.replace(".svg", "").replace("-", " ");
-      return { name: iconName, category: [dirName], urlSrc: `/svg/${dirName}/${filename}`, metadata: [] };
+      const filenameWithoutExtension = filename.replace(".svg", "");
+      const iconName = filenameWithoutExtension.replace("-", " ");
+      return {
+        name: iconName,
+        filename: `${filenameWithoutExtension}-${dirName}.svg`,
+        category: [dirName],
+        urlSrc: `/svg/${dirName}/${filename}`,
+        metadata: [iconName],
+      };
     });
 
     allIcons = [...allIcons, ...icons];
