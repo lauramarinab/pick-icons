@@ -47,6 +47,7 @@ const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
           onClick={() => {
             const gaEvent = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
             downloadIconGAEvent(gaEvent);
+
             const xhr = new XMLHttpRequest();
 
             xhr.open("GET", downloadUrl);

@@ -6,9 +6,12 @@ import { SearchBar } from "../components/SearchBar";
 import { Snackbar } from "../components/Snackbar";
 import { SearchProvider } from "../providers/SearchProvider";
 import { SnackbarProvider } from "../providers/SnackbarProvider";
+import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 
-const Homepage = () => {
+const Homepage: React.FC = () => {
   const icons = dataIcons.data;
+
+  const adBlockerActive = useCheckAdBlocker();
 
   return (
     <SnackbarProvider>
