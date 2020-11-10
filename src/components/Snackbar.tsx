@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageType, SnackbarContext } from "../providers/SnackbarProvider";
 import { css } from "@emotion/core";
-import { pink, water } from "../variables";
+import { pink, water } from "../sharedStyles";
 
 const Wrapper = styled(motion.div)<{ messageType: MessageType }>`
   background: ${water};

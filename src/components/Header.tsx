@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 
-import { gradient } from "../variables";
+import { gradientText } from "../sharedStyles";
 import { GithubIcon } from "./ui/GithubIcon";
 
 const Wrapper = styled.div`
@@ -41,9 +41,7 @@ const GitHubButton = styled.a<{ hover: boolean }>`
       props.hover &&
       css`
         font-weight: 700;
-        ${gradient};
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        ${gradientText};
       `};
   }
 `;
@@ -74,9 +72,7 @@ const Header: React.FC<{ iconsNumber: number }> = ({ iconsNumber }) => {
         <span
           css={css`
             font-size: 25px;
-            ${gradient};
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            ${gradientText};
           `}
         >
           Handmade SVG icons with much loveee

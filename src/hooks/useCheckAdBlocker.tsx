@@ -1,7 +1,7 @@
 import React from "react";
 
 const useCheckAdBlocker = () => {
-  const [adBlockerActive, setAdBlockerActive] = React.useState(false);
+  const [adBlockerActive, setAdBlockerActive] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     const checkAdBlocker = async () => {
@@ -18,6 +18,10 @@ const useCheckAdBlocker = () => {
     };
     checkAdBlocker();
   }, []);
+
+  React.useEffect(() => {
+    document.body.style.overflow = adBlockerActive ? "hidden" : "";
+  }, [adBlockerActive]);
 
   return adBlockerActive;
 };

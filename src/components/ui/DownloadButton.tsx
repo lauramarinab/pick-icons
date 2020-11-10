@@ -2,18 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import { SnackbarContext } from "../../providers/SnackbarProvider";
-import { gradient } from "../../variables";
+import { buttonStyle } from "../../sharedStyles";
 import { downloadIconGAEvent } from "utils/gtag";
+import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 
 const Button = styled(motion.div)`
-  ${gradient};
-  padding: 10px 30px;
+  ${buttonStyle};
   position: absolute;
-  color: #fff;
-  border-radius: 50px;
-  cursor: pointer;
   transform: translateY(50%);
-  font-weight: 700;
 `;
 
 const downloadBlob = (blob: Blob, filename: string) => {
@@ -32,36 +28,42 @@ interface Props {
 }
 
 const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
+  const adBlockerActive = useCheckAdBlocker();
+
   const { onOpenSnackbar } = React.useContext(SnackbarContext);
 
   const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
 
+  const onDownloadIcon = () => {
+    const gaEvent = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
+    downloadIconGAEvent(gaEvent);
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET", downloadUrl);
+    xhr.send();
+
+    xhr.onload = () => {
+      if (xhr.status !== 200) {
+        onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
+      } else {
+        const blob = new Blob([xhr.response], { type: "svg" });
+        downloadBlob(blob, filename);
+        onOpenSnackbar("notification", "WoW! Thanks.");
+      }
+    };
+  };
+
   return (
     <AnimatePresence>
-      {visible && (
+      {visible && !adBlockerActive && (
         <Button
           initial={{ bottom: "-10%" }}
           animate={{ bottom: "50%" }}
           exit={{ bottom: "-10%" }}
           transition={{ duration: 0.2 }}
           onClick={() => {
-            const gaEvent = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
-            downloadIconGAEvent(gaEvent);
-
-            const xhr = new XMLHttpRequest();
-
-            xhr.open("GET", downloadUrl);
-            xhr.send();
-
-            xhr.onload = () => {
-              if (xhr.status !== 200) {
-                onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
-              } else {
-                const blob = new Blob([xhr.response], { type: "svg" });
-                downloadBlob(blob, filename);
-                onOpenSnackbar("notification", "WoW! Thanks.");
-              }
-            };
+            onDownloadIcon();
           }}
         >
           Download SVG

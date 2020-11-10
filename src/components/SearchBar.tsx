@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { pink } from "../variables";
+import { pink } from "../sharedStyles";
 import { SearchContext } from "../providers/SearchProvider";
 
 const wrapperStyle = css`
