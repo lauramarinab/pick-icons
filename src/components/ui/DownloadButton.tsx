@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import { SnackbarContext } from "../../providers/SnackbarProvider";
 import { buttonStyle } from "../../sharedStyles";
-import { downloadIconGAEvent } from "utils/gtag";
+import { gAEvent } from "utils/gtag";
 import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 
 const Button = styled(motion.div)`
@@ -30,13 +30,17 @@ interface Props {
 const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
   const adBlockerActive = useCheckAdBlocker();
 
+  const isProd = process.env.NODE_ENV === "production";
+
   const { onOpenSnackbar } = React.useContext(SnackbarContext);
 
   const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
 
   const onDownloadIcon = () => {
-    const gaEvent = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
-    downloadIconGAEvent(gaEvent);
+    if (isProd) {
+      const gAEventVariables = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
+      gAEvent(gAEventVariables);
+    }
 
     const xhr = new XMLHttpRequest();
 
@@ -62,9 +66,7 @@ const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
           animate={{ bottom: "50%" }}
           exit={{ bottom: "-10%" }}
           transition={{ duration: 0.2 }}
-          onClick={() => {
-            onDownloadIcon();
-          }}
+          onClick={onDownloadIcon}
         >
           Download SVG
         </Button>
