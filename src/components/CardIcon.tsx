@@ -2,6 +2,9 @@ import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { DownloadButton } from "./ui/DownloadButton";
+import { CopyButton } from "./ui/CopyButton";
+import { AnimatePresence, motion } from "framer-motion";
+import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 
 const Wrapper = styled.div`
   padding: 50px;
@@ -27,6 +30,15 @@ const Icon = styled.img`
   -webkit-user-drag: none;
 `;
 
+const WrapperButton = styled(motion.div)`
+  position: absolute;
+  transform: translateY(50%);
+
+  & div:first-of-type {
+    margin-bottom: 15px;
+  }
+`;
+
 interface Props {
   iconUrlSrc: string;
   iconName: string;
@@ -34,6 +46,8 @@ interface Props {
 }
 
 const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
+  const adBlockerActive = useCheckAdBlocker();
+
   const [hover, setHover] = React.useState(false);
 
   return (
@@ -48,7 +62,19 @@ const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
       >
         {iconName}
       </h5>
-      <DownloadButton visible={hover} iconUrlSrc={iconUrlSrc} filename={filename} />
+      <AnimatePresence>
+        {hover && !adBlockerActive && (
+          <WrapperButton
+            initial={{ bottom: "-10%" }}
+            animate={{ bottom: "50%" }}
+            exit={{ bottom: "-10%" }}
+            transition={{ duration: 0.2 }}
+          >
+            <CopyButton iconUrlSrc={iconUrlSrc} filename={filename} />
+            <DownloadButton iconUrlSrc={iconUrlSrc} filename={filename} />
+          </WrapperButton>
+        )}
+      </AnimatePresence>
     </Wrapper>
   );
 };

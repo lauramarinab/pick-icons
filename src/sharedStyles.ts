@@ -16,11 +16,12 @@ const gradientText = css`
 
 const buttonStyle = css`
   ${gradient};
-  padding: 10px 30px;
+  padding: 10px 20px;
   color: #fff;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 700;
+  text-align: center;
 `;
 
 const Button = styled.div`

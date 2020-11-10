@@ -1,16 +1,9 @@
 import React from "react";
-import styled from "@emotion/styled";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { SnackbarContext } from "../../providers/SnackbarProvider";
-import { buttonStyle } from "../../sharedStyles";
 import { gAEvent } from "utils/gtag";
 import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
-
-const Button = styled(motion.div)`
-  ${buttonStyle};
-  position: absolute;
-  transform: translateY(50%);
-`;
+import { Button } from "sharedStyles";
 
 const downloadBlob = (blob: Blob, filename: string) => {
   const url = URL.createObjectURL(blob);
@@ -22,12 +15,11 @@ const downloadBlob = (blob: Blob, filename: string) => {
 };
 
 interface Props {
-  visible: boolean;
   iconUrlSrc: string;
   filename: string;
 }
 
-const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
+const DownloadButton: React.FC<Props> = ({ iconUrlSrc, filename }) => {
   const adBlockerActive = useCheckAdBlocker();
 
   const isProd = process.env.NODE_ENV === "production";
@@ -43,10 +35,8 @@ const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
     }
 
     const xhr = new XMLHttpRequest();
-
     xhr.open("GET", downloadUrl);
     xhr.send();
-
     xhr.onload = () => {
       if (xhr.status !== 200) {
         onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
@@ -58,21 +48,7 @@ const DownloadButton: React.FC<Props> = ({ visible, iconUrlSrc, filename }) => {
     };
   };
 
-  return (
-    <AnimatePresence>
-      {visible && !adBlockerActive && (
-        <Button
-          initial={{ bottom: "-10%" }}
-          animate={{ bottom: "50%" }}
-          exit={{ bottom: "-10%" }}
-          transition={{ duration: 0.2 }}
-          onClick={onDownloadIcon}
-        >
-          Download SVG
-        </Button>
-      )}
-    </AnimatePresence>
-  );
+  return <Button onClick={onDownloadIcon}>Download SVG</Button>;
 };
 
 export { DownloadButton };
