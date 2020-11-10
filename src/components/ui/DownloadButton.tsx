@@ -30,7 +30,7 @@ const DownloadButton: React.FC<Props> = ({ iconUrlSrc, filename }) => {
 
   const onDownloadIcon = () => {
     if (isProd) {
-      const gAEventVariables = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
+      const gAEventVariables = { action: "download_icon", category: "Download Icon", label: `Download ${filename}` };
       gAEvent(gAEventVariables);
     }
 

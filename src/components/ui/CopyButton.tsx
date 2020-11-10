@@ -19,7 +19,7 @@ const CopyButton: React.FC<Props> = ({ iconUrlSrc, filename }) => {
 
   const onCopySvg = () => {
     if (isProd) {
-      const gAEventVariables = { action: "file_download", category: "Downloads", label: `Download ${filename}` };
+      const gAEventVariables = { action: "copy_icon", category: "Copy SVG Icon", label: `Copy ${filename}` };
       gAEvent(gAEventVariables);
     }
 
