@@ -36,7 +36,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@200;400;700&display=swap"
             rel="stylesheet"
           />
-          <title>Pick Icons</title>
         </Head>
         <body>
           {globalStyles}
