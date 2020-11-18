@@ -1,8 +1,6 @@
 import React from "react";
-import { AnimatePresence } from "framer-motion";
 import { SnackbarContext } from "../../providers/SnackbarProvider";
 import { gAEvent } from "utils/gtag";
-import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 import { Button } from "sharedStyles";
 
 const downloadBlob = (blob: Blob, filename: string) => {
@@ -20,8 +18,6 @@ interface Props {
 }
 
 const DownloadButton: React.FC<Props> = ({ iconUrlSrc, filename }) => {
-  const adBlockerActive = useCheckAdBlocker();
-
   const isProd = process.env.NODE_ENV === "production";
 
   const { onOpenSnackbar } = React.useContext(SnackbarContext);

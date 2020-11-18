@@ -6,37 +6,58 @@ import { CopyButton } from "./ui/CopyButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 
-const Wrapper = styled.div`
-  padding: 50px;
+type IconType = "outline" | "solid";
+
+const Wrapper = styled.div<{ loadingIcon: boolean }>`
+  padding: 40px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
   border: 1px solid #dadada;
   overflow-y: hidden;
   position: relative;
   min-width: 250px;
   max-width: 300px;
+  transition: filter 0.3s;
+  filter: ${(props) => (props.loadingIcon ? "blur(1px) " : "blur(0px)")};
   @media (max-width: 650px) {
     width: 100%;
     max-width: 100%;
   }
 `;
 
-const Icon = styled.img`
-  width: 50px;
-  margin: 20px;
+type IconSet = {
+  strokeColor: string;
+  strokeWidth?: string;
+  fill: string;
+};
+
+const SvgWrapper = styled(motion.div)<{ iconSet: IconSet }>`
+  width: 80px;
+  margin: 30px 10px 10px 10px;
   user-select: none;
   -webkit-user-drag: none;
+
+  & > svg > path {
+    fill: ${(props) => props.iconSet.fill};
+    stroke-width: ${(props) => props.iconSet.strokeWidth};
+    stroke: ${(props) => props.iconSet.strokeColor};
+  }
 `;
 
 const WrapperButton = styled(motion.div)`
   position: absolute;
   transform: translateY(50%);
+  padding: 10px;
 
   & div:first-of-type {
     margin-bottom: 15px;
   }
+`;
+
+const PlaceholderIcon = styled.div`
+  width: 75px;
+  height: 75px;
 `;
 
 interface Props {
@@ -46,13 +67,45 @@ interface Props {
 }
 
 const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
+  const svgWrapperId = iconName.replace(/ /g, "-");
   const adBlockerActive = useCheckAdBlocker();
 
   const [hover, setHover] = React.useState(false);
+  const [loadingIcon, setLoadingIcon] = React.useState(true);
+
+  React.useEffect(() => {
+    const svgWrapper = document.getElementById(svgWrapperId);
+    if (svgWrapper) {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", iconUrlSrc);
+      xhr.send();
+      xhr.onload = () => {
+        if (xhr.status !== 200) {
+          setLoadingIcon(true);
+        } else {
+          setLoadingIcon(false);
+          svgWrapper.innerHTML = xhr.response;
+        }
+      };
+    }
+  }, [iconName]);
+
+  const iconType = iconUrlSrc.split("/")[2] as IconType;
 
   return (
-    <Wrapper onMouseEnter={(_) => setHover(true)} onMouseLeave={(_) => setHover(false)}>
-      <Icon src={iconUrlSrc} alt={"This Icon calls " + iconName} />
+    <Wrapper onMouseEnter={(_) => setHover(true)} onMouseLeave={(_) => setHover(false)} loadingIcon={loadingIcon}>
+      {loadingIcon && <PlaceholderIcon />}
+      <SvgWrapper
+        id={svgWrapperId}
+        animate={!loadingIcon ? "visible" : "hidden"}
+        variants={{ visible: { opacity: 1, scale: 1.1 }, hidden: { opacity: 0, scale: 0 } }}
+        transition={{ duration: 0.3 }}
+        iconSet={
+          iconType === "outline"
+            ? { strokeColor: "#000", strokeWidth: "1px", fill: "none" }
+            : { strokeColor: "none", fill: "#000" }
+        }
+      />
       <h5
         css={css`
           font-weight: 400;
