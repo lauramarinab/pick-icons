@@ -26,6 +26,13 @@ const buttonStyle = css`
 
 const Button = styled.div`
   ${buttonStyle}
+  transition: transform 0.4s;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(0.8);
+  }
 `;
 
 export { pink, water, gradient, gradientText, buttonStyle, Button };

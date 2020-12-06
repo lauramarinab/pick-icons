@@ -1,10 +1,10 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { CardIcon } from "./CardIcon";
 import { Icon } from "../types/Icon";
 import { SearchContext } from "../providers/SearchProvider";
 import { NoIconFound } from "./ui/NoIconFound";
 import { orderBy } from "lodash";
+import { CardIcon } from "./CardIcon";
 
 const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
   const { value } = React.useContext(SearchContext);

@@ -21,7 +21,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           images: [
             {
               url:
-                "https://user-images.githubusercontent.com/38502071/98811081-87c01d00-2420-11eb-8fb4-a079e6de0cde.jpg",
+                "https://user-images.githubusercontent.com/38502071/98831563-02e2fc80-243c-11eb-935d-114c89b3ab0e.jpg",
               width: 800,
               height: 600,
               alt: "Pick Icons - Beautiful hand-crafted SVG icons - download and copy SVG",

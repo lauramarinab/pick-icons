@@ -1,312 +1,263 @@
 {
   "data": [
     {
-      "name": "arrow down",
-      "filename": "arrow-down-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/arrow-down.svg",
-      "metadata": ["arrow down", "freccia"]
+      "name": "macbook",
+      "filename": "macbook-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/macbook.svg",
+      "metadata": ["macbook", "device", "tech", "digital", "computer", "pc", "imac", "apple"]
     },
     {
-      "name": "arrow downward",
-      "filename": "arrow-downward-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/arrow-downward.svg",
-      "metadata": ["arrow downward", "freccia"]
+      "name": "database add",
+      "filename": "database-add-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/database-add.svg",
+      "metadata": ["database-add"]
     },
     {
-      "name": "arrow left",
-      "filename": "arrow-left-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/arrow-left.svg",
-      "metadata": ["arrow left", "freccia"]
+      "name": "database download",
+      "filename": "database-download-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/database-download.svg",
+      "metadata": ["database-download"]
     },
     {
-      "name": "arrow right",
-      "filename": "arrow-right-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/arrow-right.svg",
-      "metadata": ["arrow right", "freccia"]
+      "name": "database remove",
+      "filename": "database-remove-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/database-remove.svg",
+      "metadata": ["database-remove"]
     },
     {
-      "name": "arrow up",
-      "filename": "arrow-up-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/arrow-up.svg",
-      "metadata": ["arrow up", "freccia"]
+      "name": "database upload",
+      "filename": "database-upload-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/database-upload.svg",
+      "metadata": ["database-upload"]
     },
     {
-      "name": "barchart",
-      "filename": "barchart-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/barchart.svg",
-      "metadata": ["barchart", "chart", "linechart", "grafico"]
+      "name": "database",
+      "filename": "database-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/database.svg",
+      "metadata": ["database"]
     },
     {
-      "name": "bookmark outline",
-      "filename": "bookmark-outline-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/bookmark-outline.svg",
-      "metadata": ["bookmark outline", "segnalibro", "marker"]
+      "name": "file csv",
+      "filename": "file-csv-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file-csv.svg",
+      "metadata": ["file-csv"]
     },
     {
-      "name": "chart",
-      "filename": "chart-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/chart.svg",
-      "metadata": ["chart", "barchart", "linechart", "grafico"]
+      "name": "file image",
+      "filename": "file-image-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file-image.svg",
+      "metadata": ["file-image"]
     },
     {
-      "name": "check",
-      "filename": "check-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/check.svg",
-      "metadata": ["check", "confirm", "ok"]
+      "name": "file jpg",
+      "filename": "file-jpg-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file-jpg.svg",
+      "metadata": ["file-jpg"]
     },
     {
-      "name": "close",
-      "filename": "close-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/close.svg",
-      "metadata": ["close", "remove", "x", "delete"]
+      "name": "file music",
+      "filename": "file-music-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file-music.svg",
+      "metadata": ["file-music"]
     },
     {
-      "name": "comments",
-      "filename": "comments-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/comments.svg",
-      "metadata": ["comments", "message"]
+      "name": "file pdf",
+      "filename": "file-pdf-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file-pdf.svg",
+      "metadata": ["file-pdf"]
     },
     {
-      "name": "delete",
-      "filename": "delete-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/delete.svg",
-      "metadata": ["delete", "remove", "basket", "trash"]
+      "name": "file video",
+      "filename": "file-video-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file-video.svg",
+      "metadata": ["file-video"]
     },
     {
-      "name": "download",
-      "filename": "download-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/download.svg",
-      "metadata": ["download", "dati", "upload"]
+      "name": "file word",
+      "filename": "file-word-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file-word.svg",
+      "metadata": ["file-word"]
     },
     {
-      "name": "edit",
-      "filename": "edit-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/edit.svg",
-      "metadata": ["edit", "pencil", "modificare", "change", "modify", "write"]
+      "name": "file",
+      "filename": "file-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/file.svg",
+      "metadata": ["file"]
     },
     {
-      "name": "expand",
-      "filename": "expand-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/expand.svg",
-      "metadata": ["expand", "espandere", "enlarge", "extend", "stretch"]
+      "name": "imac",
+      "filename": "imac-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/imac.svg",
+      "metadata": ["imac", "device", "tech", "digital", "computer", "pc", "imac", "apple"]
     },
     {
-      "name": "filter list",
-      "filename": "filter-list-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/filter-list.svg",
-      "metadata": ["filter list", "menu"]
+      "name": "pen tablet",
+      "filename": "pen-tablet-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/pen-tablet.svg",
+      "metadata": ["pen-tablet", "pen", "tablet", "tech", "device", "digital"]
     },
     {
-      "name": "heart",
-      "filename": "heart-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/heart.svg",
-      "metadata": ["heart", "love", "cuore", "amore"]
+      "name": "phone",
+      "filename": "phone-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/phone.svg",
+      "metadata": ["phone", "device", "tech", "digital", "telephone", "apple", "telefono"]
     },
     {
-      "name": "help",
-      "filename": "help-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/help.svg",
-      "metadata": ["help", "aiuto", "faq", "question"]
+      "name": "server add",
+      "filename": "server-add-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/server-add.svg",
+      "metadata": ["server-add"]
     },
     {
-      "name": "hidden",
-      "filename": "hidden-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/hidden.svg",
-      "metadata": ["hidden", "secret", "eye", "visibility off"]
+      "name": "server download",
+      "filename": "server-download-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/server-download.svg",
+      "metadata": ["server-download"]
     },
     {
-      "name": "info",
-      "filename": "info-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/info.svg",
-      "metadata": ["info", "informazioni", "information"]
+      "name": "server remove",
+      "filename": "server-remove-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/server-remove.svg",
+      "metadata": ["server-remove"]
     },
     {
-      "name": "label",
-      "filename": "label-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/label.svg",
-      "metadata": ["label", "tag", "etichetta", "ticket", "sticker"]
+      "name": "server upload",
+      "filename": "server-upload-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/server-upload.svg",
+      "metadata": ["server-upload"]
     },
     {
-      "name": "link",
-      "filename": "link-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/link.svg",
-      "metadata": ["link", "connection", "relation", "relationship"]
+      "name": "server",
+      "filename": "server-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/server.svg",
+      "metadata": ["server"]
     },
     {
-      "name": "logout",
-      "filename": "logout-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/logout.svg",
-      "metadata": ["logout", "out", "exit", "sign out"]
+      "name": "tablet",
+      "filename": "tablet-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/tablet.svg",
+      "metadata": ["tablet", "device", "tech", "digital", "apple"]
     },
     {
-      "name": "media",
-      "filename": "media-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/media.svg",
-      "metadata": ["media", "image", "gallery", "picture"]
+      "name": "cassette",
+      "filename": "cassette-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/cassette.svg",
+      "metadata": ["cassette", "music"]
     },
     {
-      "name": "menu",
-      "filename": "menu-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/menu.svg",
-      "metadata": ["menu", "hamburger menu"]
+      "name": "cd",
+      "filename": "cd-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/cd.svg",
+      "metadata": ["cd", "music"]
     },
     {
-      "name": "more horiz",
-      "filename": "more-horiz-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/more-horiz.svg",
-      "metadata": ["more horiz", "other", "options"]
+      "name": "floppy",
+      "filename": "floppy-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/floppy.svg",
+      "metadata": ["floppy", "device", "tech", "digital", "computer"]
     },
     {
-      "name": "more vert",
-      "filename": "more-vert-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/more-vert.svg",
-      "metadata": ["more vert", "other", "options"]
+      "name": "folder favorite",
+      "filename": "folder-favorite-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/folder-favorite.svg",
+      "metadata": ["folder-favorite"]
     },
     {
-      "name": "move to",
-      "filename": "move-to-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/move-to.svg",
-      "metadata": ["move to", "shift", "displace", "spostare"]
+      "name": "folder open favorite",
+      "filename": "folder-open-favorite-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/folder-open-favorite.svg",
+      "metadata": ["folder-open-favorite"]
     },
     {
-      "name": "open link",
-      "filename": "open-link-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/open-link.svg",
-      "metadata": ["open link", "external", "link", "href", "launch"]
+      "name": "folder open",
+      "filename": "folder-open-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/folder-open.svg",
+      "metadata": ["folder-open"]
     },
     {
-      "name": "play",
-      "filename": "play-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/play.svg",
-      "metadata": ["play", "start", "video"]
+      "name": "folder",
+      "filename": "folder-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/folder.svg",
+      "metadata": ["folder"]
     },
     {
-      "name": "reduce",
-      "filename": "reduce-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/reduce.svg",
-      "metadata": ["reduce", "stretch", "decrease", "ridurre"]
+      "name": "mouse apple",
+      "filename": "mouse-apple-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/mouse-apple.svg",
+      "metadata": ["mouse-apple", "device", "digital", "tech", "computer"]
     },
     {
-      "name": "remove",
-      "filename": "remove-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/remove.svg",
-      "metadata": ["remove", "delete", "less", "minus"]
+      "name": "mouse wifi",
+      "filename": "mouse-wifi-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/mouse-wifi.svg",
+      "metadata": ["mouse-wifi", "device", "digital", "tech", "computer"]
     },
     {
-      "name": "replace",
-      "filename": "replace-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/replace.svg",
-      "metadata": ["replace", "update", "aggiornare"]
+      "name": "mouse wired",
+      "filename": "mouse-wired-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/mouse-wired.svg",
+      "metadata": ["mouse-wired", "device", "digital", "tech", "computer"]
     },
     {
-      "name": "reply",
-      "filename": "reply-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/reply.svg",
-      "metadata": ["reply", "share", "condivisione", "condividere"]
+      "name": "mouse",
+      "filename": "mouse-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/mouse.svg",
+      "metadata": ["mouse", "device", "digital", "tech", "computer"]
     },
     {
-      "name": "save",
-      "filename": "save-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/save.svg",
-      "metadata": ["save", "salvare", "floppy disk"]
+      "name": "object",
+      "filename": "object-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/object.svg",
+      "metadata": ["object", "tech", "dev"]
     },
     {
-      "name": "search",
-      "filename": "search-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/search.svg",
-      "metadata": ["search", "find", "finder", "discover", "magnifying glass"]
+      "name": "tag",
+      "filename": "tag-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/tag.svg",
+      "metadata": ["tag", "tech", "dev"]
     },
     {
-      "name": "show",
-      "filename": "show-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/show.svg",
-      "metadata": ["show", "eye", "visibility", "display"]
-    },
-    {
-      "name": "update",
-      "filename": "update-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/update.svg",
-      "metadata": ["update", "aggiornare", "improve", "restore", "clock"]
-    },
-    {
-      "name": "upload",
-      "filename": "upload-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/upload.svg",
-      "metadata": ["upload", "load", "charge", "download"]
-    },
-    {
-      "name": "arrow drop down",
-      "filename": "arrow-drop-down-solid.svg",
-      "category": ["solid"],
-      "urlSrc": "/svg/solid/arrow-drop-down.svg",
-      "metadata": ["arrow drop down", "freccia"]
-    },
-    {
-      "name": "arrow drop up",
-      "filename": "arrow-drop-up-solid.svg",
-      "category": ["solid"],
-      "urlSrc": "/svg/solid/arrow-drop-up.svg",
-      "metadata": ["arrow drop up", "freccia"]
-    },
-    {
-      "name": "bookmark",
-      "filename": "bookmark-solid.svg",
-      "category": ["solid"],
-      "urlSrc": "/svg/solid/bookmark.svg",
-      "metadata": ["bookmark", "segnalibro", "marker"]
-    },
-    {
-      "name": "heart",
-      "filename": "heart-solid.svg",
-      "category": ["solid"],
-      "urlSrc": "/svg/solid/heart.svg",
-      "metadata": ["heart", "love", "cuore", "amore"]
-    },
-    {
-      "name": "add",
-      "filename": "add-outline.svg",
-      "category": ["outline"],
-      "urlSrc": "/svg/outline/add.svg",
-      "metadata": ["add", "more", "più", "plus"]
+      "name": "wifi",
+      "filename": "wifi-outline.svg",
+      "categories": ["outline", "tech-device"],
+      "urlSrc": "/svg/outline/tech-device/wifi.svg",
+      "metadata": ["wifi", "internet", "tech", "device"]
     }
   ]
 }

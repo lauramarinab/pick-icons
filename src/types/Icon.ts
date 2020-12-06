@@ -3,5 +3,5 @@ export type Icon = {
   filename: string;
   urlSrc: string;
   metadata: Array<string>;
-  category: Array<string>;
+  categories: Array<string>;
 };
