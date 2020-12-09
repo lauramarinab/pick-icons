@@ -16,6 +16,7 @@ const globalStyles = (
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-weight: 400;
+        letter-spacing: 1px;
         position: relative;
         height: 100vh;
         color: #ffffff;

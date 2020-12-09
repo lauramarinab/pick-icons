@@ -1,18 +1,10 @@
-import React from "react";
-import dataIcons from "../dataIcons.json";
-import { Header } from "../components/Header";
-import { ListIcons } from "../components/ListIcons";
-import { SearchBar } from "../components/SearchBar";
-import { Snackbar } from "../components/Snackbar";
-import { SearchProvider } from "../providers/SearchProvider";
-import { SnackbarProvider } from "../providers/SnackbarProvider";
-import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
-import { Dialog } from "components/ui/Dialog";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { Button } from "sharedStyles";
 import { Background } from "components/ui/Background";
 import { GithubIcon } from "components/ui/GithubIcon";
+import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
+import React from "react";
+import dataIcons from "../dataIcons.json";
 
 const ListWrapper = styled.div<{ adBlockerActive: boolean }>`
   transition: filter 0.3s;
@@ -51,8 +43,8 @@ const Homepage: React.FC = () => {
       <div
         css={{
           position: "absolute",
-          bottom: 185,
-          right: -110,
+          bottom: 170,
+          right: -85,
           display: "flex",
           alignItems: "center",
           transform: "rotate(90deg)",
