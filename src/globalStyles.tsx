@@ -7,6 +7,7 @@ const globalStyles = (
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        color: #ffffff;
       }
 
       html,
@@ -15,9 +16,9 @@ const globalStyles = (
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-weight: 400;
-        letter-spacing: 2px;
         position: relative;
         height: 100vh;
+        color: #ffffff;
       }
 
       code {

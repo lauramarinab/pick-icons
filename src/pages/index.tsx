@@ -11,6 +11,8 @@ import { Dialog } from "components/ui/Dialog";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { Button } from "sharedStyles";
+import { Background } from "components/ui/Background";
+import { GithubIcon } from "components/ui/GithubIcon";
 
 const ListWrapper = styled.div<{ adBlockerActive: boolean }>`
   transition: filter 0.3s;
@@ -30,8 +32,44 @@ const Homepage: React.FC = () => {
   const adBlockerActive = useCheckAdBlocker();
 
   return (
-    <>
-      {adBlockerActive && (
+    <div css={{ position: "relative", width: "100vw", height: "100vh" }}>
+      <h1
+        css={{
+          fontFamily: '"Roboto Mono", monospace',
+          fontSize: 100,
+          fontWeight: 200,
+          marginBottom: 10,
+          position: "absolute",
+          bottom: 13,
+          left: 40,
+          userSelect: "none",
+        }}
+      >
+        Pick
+        <span css={{ fontWeight: 700 }}>Icons</span>
+      </h1>
+      <div
+        css={{
+          position: "absolute",
+          bottom: 185,
+          right: -110,
+          display: "flex",
+          alignItems: "center",
+          transform: "rotate(90deg)",
+        }}
+      >
+        <div css={{ fontSize: 14, fontWeight: 700, userSelect: "none" }}>MIT Licensed</div>
+        <a
+          css={{ display: "flex", alignItems: "center", cursor: "pointer", marginLeft: 30, textDecoration: "none" }}
+          href="https://github.com/lauramarinab/pick-icons"
+          target="__blank"
+        >
+          <GithubIcon />
+          <div css={{ fontSize: 14, fontWeight: 700, marginLeft: 8 }}>View on GitHub</div>
+        </a>
+      </div>
+      <Background />
+      {/* {adBlockerActive && (
         <Dialog
           open={adBlockerActive}
           title="Warning Ad Blocker"
@@ -56,8 +94,8 @@ const Homepage: React.FC = () => {
             </ListWrapper>
           </div>
         </SearchProvider>
-      </SnackbarProvider>
-    </>
+      </SnackbarProvider>*/}
+    </div>
   );
 };
 
