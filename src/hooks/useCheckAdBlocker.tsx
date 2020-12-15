@@ -20,7 +20,12 @@ const useCheckAdBlocker = () => {
   }, []);
 
   React.useEffect(() => {
-    document.body.style.overflow = adBlockerActive ? "hidden" : "";
+    // ATTENTION
+    // ATTENTION
+    // ATTENTION
+    // ATTENTION
+    // ATTENTION
+    // document.body.style.overflow = adBlockerActive ? "hidden" : "";
   }, [adBlockerActive]);
 
   return adBlockerActive;

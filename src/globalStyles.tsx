@@ -7,7 +7,11 @@ const globalStyles = (
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        color: #ffffff;
+        color: var(--white);
+      }
+
+      :root {
+        --white: #ffffff;
       }
 
       html,
@@ -19,7 +23,7 @@ const globalStyles = (
         letter-spacing: 1px;
         position: relative;
         height: 100vh;
-        color: #ffffff;
+        color: var(--white);
       }
 
       code {

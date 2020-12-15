@@ -10,7 +10,7 @@ const wrapperStyle = css`
   position: sticky;
   top: 0px;
   z-index: 1;
-  background: #fff;
+  background: var(--white);
 `;
 
 const input = css`

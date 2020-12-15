@@ -17,7 +17,7 @@ const gradientText = css`
 const buttonStyle = css`
   ${gradient};
   padding: 10px 20px;
-  color: #fff;
+  color: var(--white);
   border-radius: 50px;
   cursor: pointer;
   font-weight: 700;

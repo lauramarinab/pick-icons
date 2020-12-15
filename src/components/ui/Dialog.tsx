@@ -9,7 +9,7 @@ const wrapperStyle = css`
   min-height: 180px;
   max-width: 500px;
   position: fixed;
-  background: #ffffff;
+  background: var(--white);
   box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.25);
   left: 50%;
   bottom: calc(50% + 1px);

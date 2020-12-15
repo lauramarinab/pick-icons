@@ -10,7 +10,7 @@ const absoluteStyle: CSSObject = {
 
 export const Background: React.FC = () => {
   return (
-    <div css={{ width: "100vw", height: "100vh", userSelect: "none", zIndex: -1, ...absoluteStyle }}>
+    <div css={{ width: "100vw", height: "100vh", userSelect: "none", zIndex: -1, position: "fixed", top: 0 }}>
       <img src={grain} css={{ width: "100vw", height: "100vh", opacity: 0.2 }} />
       <div
         css={{

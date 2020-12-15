@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+
 import { DownloadButton } from "./ui/DownloadButton";
 import { CopyButton } from "./ui/CopyButton";
 import { AnimatePresence, motion } from "framer-motion";
@@ -9,7 +10,17 @@ import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 type IconType = "outline" | "solid";
 
 const Wrapper = styled.div<{ loadingIcon: boolean }>`
-  padding: 40px;
+  transition: background 3s;
+  background: transparent;
+  :hover {
+    background: radial-gradient(
+      114.46% 159.17% at 76.94% -34.72%,
+      rgba(0, 255, 209, 0.63) 0%,
+      rgba(255, 0, 184, 0.37) 51.05%,
+      rgba(255, 122, 0, 0.92) 100%
+    );
+  }
+  padding: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -102,8 +113,8 @@ const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
         transition={{ duration: 0.3 }}
         iconSet={
           iconType === "outline"
-            ? { strokeColor: "#000", strokeWidth: "1px", fill: "none" }
-            : { strokeColor: "none", fill: "#000" }
+            ? { strokeColor: "var(--white)", strokeWidth: "1px", fill: "none" }
+            : { strokeColor: "none", fill: "var(--white)" }
         }
       />
       <h5
