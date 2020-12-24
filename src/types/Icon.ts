@@ -1,7 +1,7 @@
 export type Icon = {
-  name: string;
-  filename: string;
-  urlSrc: string;
-  metadata: Array<string>;
   categories: Array<string>;
+  filename: string;
+  metadata: Array<string>;
+  name: string;
+  urlSrc: string;
 };

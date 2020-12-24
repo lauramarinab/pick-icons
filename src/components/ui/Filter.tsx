@@ -4,12 +4,12 @@ export const Filter: React.FC<Props> = () => {
   return (
     <div
       css={{
-        width: 350,
-        height: 350,
         background: "var(--white)",
+        height: 350,
         opacity: 0.5,
         position: "sticky",
         top: 110,
+        width: 350,
       }}
     >
       Filter

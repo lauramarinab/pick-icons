@@ -1,6 +1,6 @@
 import { CSSObject } from "@emotion/styled";
-import { useViewportScroll } from "framer-motion";
 import React from "react";
+
 const grain = require("../../assets/grain-max.jpg");
 
 const absoluteStyle: CSSObject = {
@@ -10,14 +10,14 @@ const absoluteStyle: CSSObject = {
 
 export const Background: React.FC = () => {
   return (
-    <div css={{ width: "100vw", height: "100vh", userSelect: "none", zIndex: -1, position: "fixed", top: 0 }}>
-      <img src={grain} css={{ width: "100vw", height: "100vh", opacity: 0.2 }} />
+    <div css={{ height: "100vh", position: "fixed", top: 0, userSelect: "none", width: "100vw", zIndex: -1 }}>
+      <img alt="" css={{ height: "100vh", opacity: 0.2, width: "100vw" }} src={grain} />
       <div
         css={{
-          height: "100%",
-          width: "100%",
           background: "radial-gradient(49.83% 42.58% at 85.69% 86.91%, #06F2E4 0%, #FF9900 100%)",
+          height: "100%",
           opacity: "0.2",
+          width: "100%",
           ...absoluteStyle,
         }}
       />

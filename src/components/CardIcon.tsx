@@ -1,10 +1,11 @@
-import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-
-import { DownloadButton } from "./ui/DownloadButton";
-import { CopyButton } from "./ui/CopyButton";
 import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+
+import { CopyButton } from "./ui/CopyButton";
+import { DownloadButton } from "./ui/DownloadButton";
+
 import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 
 type IconType = "outline" | "solid";
@@ -38,9 +39,9 @@ const Wrapper = styled.div<{ loadingIcon: boolean }>`
 `;
 
 type IconSet = {
+  fill: string;
   strokeColor: string;
   strokeWidth?: string;
-  fill: string;
 };
 
 const SvgWrapper = styled(motion.div)<{ iconSet: IconSet }>`
@@ -72,12 +73,12 @@ const PlaceholderIcon = styled.div`
 `;
 
 interface Props {
-  iconUrlSrc: string;
-  iconName: string;
   filename: string;
+  iconName: string;
+  iconUrlSrc: string;
 }
 
-const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
+const CardIcon: React.FC<Props> = ({ filename, iconName, iconUrlSrc }) => {
   const svgWrapperId = iconName.replace(/ /g, "-");
   const adBlockerActive = useCheckAdBlocker();
 
@@ -104,18 +105,18 @@ const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
   const iconType = iconUrlSrc.split("/")[2] as IconType;
 
   return (
-    <Wrapper onMouseEnter={(_) => setHover(true)} onMouseLeave={(_) => setHover(false)} loadingIcon={loadingIcon}>
+    <Wrapper loadingIcon={loadingIcon} onMouseEnter={(_) => setHover(true)} onMouseLeave={(_) => setHover(false)}>
       {loadingIcon && <PlaceholderIcon />}
       <SvgWrapper
-        id={svgWrapperId}
         animate={!loadingIcon ? "visible" : "hidden"}
-        variants={{ visible: { opacity: 1, scale: 1.1 }, hidden: { opacity: 0, scale: 0 } }}
-        transition={{ duration: 0.3 }}
         iconSet={
           iconType === "outline"
-            ? { strokeColor: "var(--white)", strokeWidth: "1px", fill: "none" }
-            : { strokeColor: "none", fill: "var(--white)" }
+            ? { fill: "none", strokeColor: "var(--white)", strokeWidth: "1px" }
+            : { fill: "var(--white)", strokeColor: "none" }
         }
+        id={svgWrapperId}
+        transition={{ duration: 0.3 }}
+        variants={{ hidden: { opacity: 0, scale: 0 }, visible: { opacity: 1, scale: 1.1 } }}
       />
       <h5
         css={css`
@@ -129,13 +130,13 @@ const CardIcon: React.FC<Props> = ({ iconUrlSrc, iconName, filename }) => {
       <AnimatePresence>
         {hover && !adBlockerActive && (
           <WrapperButton
-            initial={{ bottom: "-10%" }}
             animate={{ bottom: "50%" }}
             exit={{ bottom: "-10%" }}
+            initial={{ bottom: "-10%" }}
             transition={{ duration: 0.2 }}
           >
-            <CopyButton iconUrlSrc={iconUrlSrc} filename={filename} />
-            <DownloadButton iconUrlSrc={iconUrlSrc} filename={filename} />
+            <CopyButton filename={filename} iconUrlSrc={iconUrlSrc} />
+            <DownloadButton filename={filename} iconUrlSrc={iconUrlSrc} />
           </WrapperButton>
         )}
       </AnimatePresence>

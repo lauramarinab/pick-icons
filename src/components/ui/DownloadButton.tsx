@@ -1,7 +1,9 @@
 import React from "react";
+
 import { SnackbarContext } from "../../providers/SnackbarProvider";
-import { gAEvent } from "utils/gtag";
+
 import { Button } from "sharedStyles";
+import { gAEvent } from "utils/gtag";
 
 const downloadBlob = (blob: Blob, filename: string) => {
   const url = URL.createObjectURL(blob);
@@ -13,11 +15,11 @@ const downloadBlob = (blob: Blob, filename: string) => {
 };
 
 interface Props {
-  iconUrlSrc: string;
   filename: string;
+  iconUrlSrc: string;
 }
 
-const DownloadButton: React.FC<Props> = ({ iconUrlSrc, filename }) => {
+const DownloadButton: React.FC<Props> = ({ filename, iconUrlSrc }) => {
   const isProd = process.env.NODE_ENV === "production";
 
   const { onOpenSnackbar } = React.useContext(SnackbarContext);

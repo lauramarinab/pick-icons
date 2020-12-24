@@ -1,14 +1,15 @@
-import { SnackbarContext } from "providers/SnackbarProvider";
 import React from "react";
+
+import { SnackbarContext } from "providers/SnackbarProvider";
 import { Button } from "sharedStyles";
 import { gAEvent } from "utils/gtag";
 
 interface Props {
-  iconUrlSrc: string;
   filename: string;
+  iconUrlSrc: string;
 }
 
-const CopyButton: React.FC<Props> = ({ iconUrlSrc, filename }) => {
+const CopyButton: React.FC<Props> = ({ filename, iconUrlSrc }) => {
   const el = React.useRef<HTMLTextAreaElement>(document.createElement("textarea"));
 
   const isProd = process.env.NODE_ENV === "production";

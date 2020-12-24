@@ -1,7 +1,8 @@
-import React from "react";
 import { css } from "@emotion/core";
-import { pink } from "../sharedStyles";
+import React from "react";
+
 import { SearchContext } from "../providers/SearchProvider";
+import { pink } from "../sharedStyles";
 
 const wrapperStyle = css`
   width: 100vw;
@@ -33,15 +34,15 @@ const input = css`
 `;
 
 const SearchBar: React.FC = () => {
-  const { value, onChangeValue } = React.useContext(SearchContext);
+  const { onChangeValue, value } = React.useContext(SearchContext);
 
   return (
     <div css={wrapperStyle}>
       <input
+        css={input}
+        placeholder="Search..."
         type="text"
         value={value}
-        placeholder="Search..."
-        css={input}
         onChange={(e) => onChangeValue(e.currentTarget.value)}
       />
     </div>

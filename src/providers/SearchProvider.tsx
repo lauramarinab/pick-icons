@@ -1,8 +1,8 @@
 import React from "react";
 
 type SearchContext = {
-  value: string;
   onChangeValue: (value: string) => void;
+  value: string;
 };
 
 const SearchContext = React.createContext<SearchContext>({} as SearchContext);
@@ -12,7 +12,7 @@ const SearchProvider: React.FC = ({ children }) => {
 
   const onChangeValue = (value: string) => setValue(value);
 
-  return <SearchContext.Provider value={{ value, onChangeValue }}>{children}</SearchContext.Provider>;
+  return <SearchContext.Provider value={{ onChangeValue, value }}>{children}</SearchContext.Provider>;
 };
 
 export { SearchProvider, SearchContext };

@@ -1,7 +1,8 @@
-import React from "react";
 import { css } from "@emotion/core";
-import { createPortal } from "react-dom";
 import { AnimatePresence } from "framer-motion";
+import React from "react";
+import { createPortal } from "react-dom";
+
 import { gradientText } from "sharedStyles";
 
 const wrapperStyle = css`
@@ -44,20 +45,21 @@ const buttonSectionStyle = css`
 `;
 
 type Props = {
-  open: boolean;
-  onClose?: () => void;
-  title: string;
-  message: string | JSX.Element;
   buttonSection: JSX.Element;
+  message: string | JSX.Element;
+  open: boolean;
+  title: string;
+  onClose?: () => void;
 };
 
-const Dialog: React.FC<Props> = ({ open, onClose, message, title, buttonSection }) => {
+const Dialog: React.FC<Props> = ({ buttonSection, message, onClose, open, title }) => {
   const el = React.useRef<HTMLDivElement>(document.createElement("div"));
 
   React.useEffect(() => {
-    document.body.appendChild(el.current);
+    const element = el.current;
+    document.body.appendChild(element);
     return () => {
-      document.body.removeChild(el.current);
+      document.body.removeChild(element);
     };
   }, []);
 

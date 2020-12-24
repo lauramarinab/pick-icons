@@ -3,11 +3,11 @@ import React from "react";
 export type MessageType = "error" | "notification";
 
 type SnackbarContext = {
-  visible: boolean;
-  messageType: MessageType | null;
   message: string;
-  onOpenSnackbar: (messageType: MessageType, message: string) => void;
+  messageType: MessageType | null;
   onClose: () => void;
+  onOpenSnackbar: (messageType: MessageType, message: string) => void;
+  visible: boolean;
 };
 
 const SnackbarContext = React.createContext<SnackbarContext>({} as SnackbarContext);
@@ -50,7 +50,7 @@ const SnackbarProvider: React.FC = ({ children }) => {
   }, [messageType]);
 
   return (
-    <SnackbarContext.Provider value={{ visible, messageType, message, onOpenSnackbar, onClose }}>
+    <SnackbarContext.Provider value={{ message, messageType, onClose, onOpenSnackbar, visible }}>
       {children}
     </SnackbarContext.Provider>
   );

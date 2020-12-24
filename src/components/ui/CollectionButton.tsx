@@ -1,7 +1,9 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { useListingScroll } from "hooks/useListingScroll";
+import { motion } from "framer-motion";
 import React from "react";
+
 import { CollectionIcon } from "./icons/CollectionIcon";
+
+import { useListingScroll } from "hooks/useListingScroll";
 
 const CollectionButton: React.FC = () => {
   const { listingHasScrolled } = useListingScroll();
@@ -9,21 +11,21 @@ const CollectionButton: React.FC = () => {
   return (
     <motion.div
       animate={{ x: listingHasScrolled ? 130 : 0 }}
-      transition={{ duration: 0.2 }}
       css={{
-        display: "flex",
         alignItems: "center",
-        position: "fixed",
-        top: 37,
-        right: 40,
         cursor: "pointer",
+        display: "flex",
+        position: "fixed",
+        right: 40,
+        top: 37,
         zIndex: 1,
       }}
+      transition={{ duration: 0.2 }}
     >
       <CollectionIcon />
       <motion.p
-        css={{ fontWeight: 700, fontSize: 18, marginLeft: 15 }}
         animate={{ opacity: listingHasScrolled ? 0 : 1 }}
+        css={{ fontSize: 18, fontWeight: 700, marginLeft: 15 }}
         transition={{ duration: 0.1 }}
       >
         Collection

@@ -1,8 +1,10 @@
 import { css } from "@emotion/core";
 import { orderBy } from "lodash";
 import React from "react";
+
 import { SearchContext } from "../providers/SearchProvider";
 import { Icon } from "../types/Icon";
+
 import { CardIcon } from "./CardIcon";
 import { NoIconFound } from "./ui/NoIconFound";
 
@@ -22,7 +24,6 @@ const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
 
   return (
     <div
-      id="list-icons"
       css={css`
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -31,9 +32,10 @@ const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
         padding-bottom: 150px;
         justify-items: center;
       `}
+      id="list-icons"
     >
       {filteredIcons.map((icon, i) => {
-        return <CardIcon key={i} iconName={icon.name} iconUrlSrc={icon.urlSrc} filename={icon.filename} />;
+        return <CardIcon key={i} filename={icon.filename} iconName={icon.name} iconUrlSrc={icon.urlSrc} />;
       })}
     </div>
   );

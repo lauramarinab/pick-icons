@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useListingScroll = () => {
   const [scrollTop, setScrollTop] = useState<number>(0);
@@ -16,7 +16,7 @@ export const useListingScroll = () => {
   }, []);
 
   return {
-    scrollTop,
     listingHasScrolled,
+    scrollTop,
   };
 };
