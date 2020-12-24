@@ -1,10 +1,10 @@
-import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
-import { CopyButton } from "./ui/CopyButton";
-import { DownloadButton } from "./ui/DownloadButton";
+import { CollectionAddIcon } from "./ui/icons/CollectionAddIcon";
+import { CopyIcon } from "./ui/icons/CopyIcon";
+import { DownloadIcon } from "./ui/icons/DownloadIcon";
 
 import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
 
@@ -21,11 +21,10 @@ const Wrapper = styled.div<{ loadingIcon: boolean }>`
       rgba(255, 122, 0, 0.92) 100%
     );
   }
-  padding: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #dadada;
+  /* border: 1px solid #dadada; */
   overflow-y: hidden;
   position: relative;
   min-width: 250px;
@@ -57,20 +56,36 @@ const SvgWrapper = styled(motion.div)<{ iconSet: IconSet }>`
   }
 `;
 
-const WrapperButton = styled(motion.div)`
-  position: absolute;
-  transform: translateY(50%);
-  padding: 10px;
-
-  & div:first-of-type {
-    margin-bottom: 15px;
-  }
-`;
-
 const PlaceholderIcon = styled.div`
   width: 75px;
   height: 75px;
 `;
+
+const ActionButton: React.FC<{ icon: React.ReactNode; disabled?: boolean }> = ({ disabled, icon }) => {
+  return (
+    <div
+      css={{
+        ":hover": {
+          "> svg": {
+            transform: "scale(1.1) translateZ(0px)",
+          },
+        },
+        "> svg": {
+          opacity: disabled ? 0.5 : 1,
+          transition: "transform 0.3s, opacity 0.3s",
+        },
+        alignItems: "center",
+        cursor: disabled ? "default" : "pointer",
+        display: "flex",
+        height: "100%",
+        justifyContent: "center",
+        width: "100%",
+      }}
+    >
+      {icon}
+    </div>
+  );
+};
 
 interface Props {
   filename: string;
@@ -100,46 +115,68 @@ const CardIcon: React.FC<Props> = ({ filename, iconName, iconUrlSrc }) => {
         }
       };
     }
-  }, [iconName]);
+  }, [svgWrapperId, iconUrlSrc]);
 
   const iconType = iconUrlSrc.split("/")[2] as IconType;
 
   return (
     <Wrapper loadingIcon={loadingIcon} onMouseEnter={(_) => setHover(true)} onMouseLeave={(_) => setHover(false)}>
-      {loadingIcon && <PlaceholderIcon />}
-      <SvgWrapper
-        animate={!loadingIcon ? "visible" : "hidden"}
-        iconSet={
-          iconType === "outline"
-            ? { fill: "none", strokeColor: "var(--white)", strokeWidth: "1px" }
-            : { fill: "var(--white)", strokeColor: "none" }
-        }
-        id={svgWrapperId}
-        transition={{ duration: 0.3 }}
-        variants={{ hidden: { opacity: 0, scale: 0 }, visible: { opacity: 1, scale: 1.1 } }}
-      />
-      <h5
-        css={css`
-          font-weight: 400;
-          letter-spacing: 1px;
-          text-align: center;
-        `}
-      >
-        {iconName}
-      </h5>
       <AnimatePresence>
-        {hover && !adBlockerActive && (
-          <WrapperButton
-            animate={{ bottom: "50%" }}
-            exit={{ bottom: "-10%" }}
-            initial={{ bottom: "-10%" }}
-            transition={{ duration: 0.2 }}
+        {hover && (
+          <motion.div
+            animate={{ opacity: 1 }}
+            css={{
+              "> *": {
+                justifySelf: "center",
+              },
+              "> :first-of-type": {
+                borderRight: "2px solid white",
+              },
+              "> :last-of-type": {
+                borderLeft: "2px solid white",
+              },
+              alignItems: "center",
+              borderBottom: "2px solid white",
+              display: "grid",
+              gridTemplateColumns: "33.3% 33.3% 33.3%",
+              height: 50,
+              position: "absolute",
+              width: "100%",
+            }}
+            // exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.1 }}
           >
-            <CopyButton filename={filename} iconUrlSrc={iconUrlSrc} />
-            <DownloadButton filename={filename} iconUrlSrc={iconUrlSrc} />
-          </WrapperButton>
+            <ActionButton disabled={true} icon={<CopyIcon />} />
+            <ActionButton disabled={true} icon={<DownloadIcon />} />
+            <ActionButton disabled={true} icon={<CollectionAddIcon />} />
+          </motion.div>
+          // <WrapperButton
+          //   animate={{ bottom: "50%" }}
+          //   exit={{ bottom: "-10%" }}
+          //   initial={{ bottom: "-10%" }}
+          //   transition={{ duration: 0.2 }}
+          // >
+          //   <CopyButton filename={filename} iconUrlSrc={iconUrlSrc} />
+          //   <DownloadButton filename={filename} iconUrlSrc={iconUrlSrc} />
+          // </WrapperButton>
         )}
       </AnimatePresence>
+      <div css={{ alignItems: "center", display: "flex", flexDirection: "column", padding: 40 }}>
+        {loadingIcon && <PlaceholderIcon />}
+        <SvgWrapper
+          animate={!loadingIcon ? "visible" : "hidden"}
+          iconSet={
+            iconType === "outline"
+              ? { fill: "none", strokeColor: "var(--white)", strokeWidth: "1px" }
+              : { fill: "var(--white)", strokeColor: "none" }
+          }
+          id={svgWrapperId}
+          transition={{ duration: 0.3 }}
+          variants={{ hidden: { opacity: 0, scale: 0 }, visible: { opacity: 1, scale: 1.1 } }}
+        />
+        <h5 css={{ fontWeight: 700, letterSpacing: 1, textAlign: "center" }}>{iconName}</h5>
+      </div>
     </Wrapper>
   );
 };

@@ -1,4 +1,3 @@
-import { css } from "@emotion/core";
 import React from "react";
 
 const image = require("../../assets/no-icon-found.svg");
