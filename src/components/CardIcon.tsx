@@ -67,7 +67,7 @@ const ActionButton: React.FC<{ icon: React.ReactNode; disabled?: boolean }> = ({
       css={{
         ":hover": {
           "> svg": {
-            transform: "scale(1.1) translateZ(0px)",
+            transform: disabled ? "" : "scale(1.1) translateZ(0px)",
           },
         },
         "> svg": {
@@ -162,7 +162,15 @@ const CardIcon: React.FC<Props> = ({ filename, iconName, iconUrlSrc }) => {
           // </WrapperButton>
         )}
       </AnimatePresence>
-      <div css={{ alignItems: "center", display: "flex", flexDirection: "column", padding: 40 }}>
+      <div
+        css={{
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          padding: "50px 0px",
+          paddingBottom: 20,
+        }}
+      >
         {loadingIcon && <PlaceholderIcon />}
         <SvgWrapper
           animate={!loadingIcon ? "visible" : "hidden"}
