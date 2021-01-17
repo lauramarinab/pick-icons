@@ -1,42 +1,41 @@
-import { css } from "@emotion/core";
 import { orderBy } from "lodash";
 import React from "react";
-
 import { SearchContext } from "../providers/SearchProvider";
 import { Icon } from "../types/Icon";
-
 import { CardIcon } from "./CardIcon";
-import { NoIconFound } from "./ui/NoIconFound";
 
 const ListIcons: React.FC<{ icons: Array<Icon> }> = ({ icons }) => {
-  const { value } = React.useContext(SearchContext);
+  const { value, type } = React.useContext(SearchContext);
 
   const orderedIcons = orderBy(icons, "filename");
 
   let filteredIcons: Array<Icon> = orderedIcons;
-  if (value.length > 0) {
+  if (Boolean(value.length)) {
     filteredIcons = orderedIcons.filter((icon) => icon.metadata.find((m) => m.includes(value.toLowerCase())));
   }
-
-  if (filteredIcons.length === 0) {
-    return <NoIconFound />;
+  if (Boolean(type)) {
+    filteredIcons = orderedIcons.filter((icon) => icon.categories.find((c) => c.includes(type.toLowerCase())));
   }
 
   return (
     <div
-      css={css`
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 0px;
-        padding: 110px 50px;
-        padding-bottom: 150px;
-        justify-items: center;
-      `}
+      css={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        gridGap: 0,
+        padding: "110px 50px",
+        paddingBottom: 150,
+        justifyItems: "center",
+      }}
       id="list-icons"
     >
-      {filteredIcons.map((icon, i) => {
-        return <CardIcon key={i} filename={icon.filename} iconName={icon.name} iconUrlSrc={icon.urlSrc} />;
-      })}
+      {filteredIcons.length > 0 ? (
+        filteredIcons.map((icon, i) => {
+          return <CardIcon key={i} filename={icon.filename} iconName={icon.name} iconUrlSrc={icon.urlSrc} />;
+        })
+      ) : (
+        <div css={{ padding: 100 }}>No icon found... 🥺</div>
+      )}
     </div>
   );
 };

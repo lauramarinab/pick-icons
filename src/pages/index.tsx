@@ -1,9 +1,6 @@
-import { css } from "@emotion/core";
-import styled from "@emotion/styled";
 import { ListIcons } from "components/ListIcons";
 import { Snackbar } from "components/Snackbar";
 import { Background } from "components/ui/Background";
-import { CollectionButton } from "components/ui/CollectionButton";
 import { Filter } from "components/ui/Filter";
 import { githubIcon } from "components/ui/icons/githubIcon";
 import { motion } from "framer-motion";
