@@ -1,6 +1,6 @@
 import React from "react";
 
-export const DownloadIcon: React.FC = () => (
+export const downloadIcon = (
   <svg fill="none" height="21" viewBox="0 0 22 21" width="22" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M14.2929 9.29289L12 11.5858L12 0H9.99998L9.99998 11.5858L7.70708 9.29289L6.29287 10.7071L11 15.4142L15.7071 10.7071L14.2929 9.29289Z"

@@ -1,15 +1,16 @@
-import React from "react";
-
 import { SnackbarContext } from "providers/SnackbarProvider";
-import { Button } from "sharedStyles";
+import React from "react";
 import { gAEvent } from "utils/gtag";
+import { ActionButton } from "./ActionButton";
+import { copyIcon } from "./icons/copyIcon";
 
 interface Props {
   filename: string;
   iconUrlSrc: string;
+  disabled?: boolean;
 }
 
-const CopyButton: React.FC<Props> = ({ filename, iconUrlSrc }) => {
+const CopyButton: React.FC<Props> = ({ filename, iconUrlSrc, disabled }) => {
   const el = React.useRef<HTMLTextAreaElement>(document.createElement("textarea"));
 
   const isProd = process.env.NODE_ENV === "production";
@@ -43,7 +44,11 @@ const CopyButton: React.FC<Props> = ({ filename, iconUrlSrc }) => {
     };
   };
 
-  return <Button onClick={onCopySvg}>Copy SVG</Button>;
+  return (
+    <ActionButton onClick={onCopySvg} disabled={disabled}>
+      {copyIcon}
+    </ActionButton>
+  );
 };
 
 export { CopyButton };

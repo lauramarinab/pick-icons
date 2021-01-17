@@ -1,6 +1,6 @@
 import React from "react";
 
-export const CollectionIcon: React.FC = () => (
+export const collectionIcon = (
   <svg fill="none" height="34" viewBox="0 0 34 34" width="34" xmlns="http://www.w3.org/2000/svg">
     <path
       clipRule="evenodd"

@@ -1,9 +1,8 @@
 import React from "react";
-
-import { SnackbarContext } from "../../providers/SnackbarProvider";
-
-import { Button } from "sharedStyles";
 import { gAEvent } from "utils/gtag";
+import { SnackbarContext } from "../../providers/SnackbarProvider";
+import { ActionButton } from "./ActionButton";
+import { downloadIcon } from "./icons/downloadIcon";
 
 const downloadBlob = (blob: Blob, filename: string) => {
   const url = URL.createObjectURL(blob);
@@ -17,9 +16,10 @@ const downloadBlob = (blob: Blob, filename: string) => {
 interface Props {
   filename: string;
   iconUrlSrc: string;
+  disabled?: boolean;
 }
 
-const DownloadButton: React.FC<Props> = ({ filename, iconUrlSrc }) => {
+const DownloadButton: React.FC<Props> = ({ filename, iconUrlSrc, disabled }) => {
   const isProd = process.env.NODE_ENV === "production";
 
   const { onOpenSnackbar } = React.useContext(SnackbarContext);
@@ -46,7 +46,11 @@ const DownloadButton: React.FC<Props> = ({ filename, iconUrlSrc }) => {
     };
   };
 
-  return <Button onClick={onDownloadIcon}>Download SVG</Button>;
+  return (
+    <ActionButton disabled={disabled} onClick={onDownloadIcon}>
+      {downloadIcon}
+    </ActionButton>
+  );
 };
 
 export { DownloadButton };

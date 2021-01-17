@@ -1,12 +1,10 @@
 import styled from "@emotion/styled";
+import { AddCollectionButton } from "components/ui/AddCollectionButton";
+import { CopyButton } from "components/ui/CopyButton";
+import { DownloadButton } from "components/ui/DownloadButton";
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
-
-import { CollectionAddIcon } from "./ui/icons/CollectionAddIcon";
-import { CopyIcon } from "./ui/icons/CopyIcon";
-import { DownloadIcon } from "./ui/icons/DownloadIcon";
-
 import { useCheckAdBlocker } from "hooks/useCheckAdBlocker";
+import React from "react";
 
 type IconType = "outline" | "solid";
 
@@ -60,32 +58,6 @@ const PlaceholderIcon = styled.div`
   width: 75px;
   height: 75px;
 `;
-
-const ActionButton: React.FC<{ icon: React.ReactNode; disabled?: boolean }> = ({ disabled, icon }) => {
-  return (
-    <div
-      css={{
-        ":hover": {
-          "> svg": {
-            transform: disabled ? "" : "scale(1.1) translateZ(0px)",
-          },
-        },
-        "> svg": {
-          opacity: disabled ? 0.5 : 1,
-          transition: "transform 0.3s, opacity 0.3s",
-        },
-        alignItems: "center",
-        cursor: disabled ? "default" : "pointer",
-        display: "flex",
-        height: "100%",
-        justifyContent: "center",
-        width: "100%",
-      }}
-    >
-      {icon}
-    </div>
-  );
-};
 
 interface Props {
   filename: string;
@@ -143,23 +115,14 @@ const CardIcon: React.FC<Props> = ({ filename, iconName, iconUrlSrc }) => {
               position: "absolute",
               width: "100%",
             }}
-            // exit={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
           >
-            <ActionButton disabled={true} icon={<CopyIcon />} />
-            <ActionButton disabled={true} icon={<DownloadIcon />} />
-            <ActionButton disabled={true} icon={<CollectionAddIcon />} />
+            <CopyButton filename={filename} iconUrlSrc={iconUrlSrc} />
+            <DownloadButton filename={filename} iconUrlSrc={iconUrlSrc} />
+            <AddCollectionButton filename={filename} iconUrlSrc={iconUrlSrc} disabled />
           </motion.div>
-          // <WrapperButton
-          //   animate={{ bottom: "50%" }}
-          //   exit={{ bottom: "-10%" }}
-          //   initial={{ bottom: "-10%" }}
-          //   transition={{ duration: 0.2 }}
-          // >
-          //   <CopyButton filename={filename} iconUrlSrc={iconUrlSrc} />
-          //   <DownloadButton filename={filename} iconUrlSrc={iconUrlSrc} />
-          // </WrapperButton>
         )}
       </AnimatePresence>
       <div

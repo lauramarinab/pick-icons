@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-import { CollectionIcon } from "./icons/CollectionIcon";
+import { collectionIcon } from "./icons/collectionIcon";
 
 import { useListingScroll } from "hooks/useListingScroll";
 
@@ -22,7 +22,7 @@ const CollectionButton: React.FC = () => {
       }}
       transition={{ duration: 0.2 }}
     >
-      <CollectionIcon />
+      {collectionIcon}
       <motion.p
         animate={{ opacity: listingHasScrolled ? 0 : 1 }}
         css={{ fontSize: 18, fontWeight: 700, marginLeft: 15 }}

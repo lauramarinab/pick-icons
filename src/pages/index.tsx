@@ -1,31 +1,17 @@
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
-import { flatMap } from "lodash";
-import React from "react";
-
-import dataIcons from "../dataIcons.json";
-
 import { ListIcons } from "components/ListIcons";
+import { Snackbar } from "components/Snackbar";
 import { Background } from "components/ui/Background";
 import { CollectionButton } from "components/ui/CollectionButton";
 import { Filter } from "components/ui/Filter";
-import { GithubIcon } from "components/ui/icons/GithubIcon";
+import { githubIcon } from "components/ui/icons/githubIcon";
+import { motion } from "framer-motion";
 import { useListingScroll } from "hooks/useListingScroll";
-import { SearchProvider } from "providers/SearchProvider";
+import { flatMap } from "lodash";
 import { ProvidersWrapper } from "providers/ProvidersWrapper";
-
-const ListWrapper = styled.div<{ adBlockerActive: boolean }>`
-  transition: filter 0.3s;
-  filter: blur(0px);
-
-  ${(props) =>
-    props.adBlockerActive &&
-    css`
-      user-select: none;
-      filter: blur(3px);
-    `}
-`;
+import React from "react";
+import dataIcons from "../dataIcons.json";
 
 const Homepage: React.FC = () => {
   const icons = dataIcons.data;
@@ -89,20 +75,16 @@ const Homepage: React.FC = () => {
             href="https://github.com/lauramarinab/pick-icons"
             target="__blank"
           >
-            <GithubIcon />
+            {githubIcon}
             <div css={{ fontSize: 14, fontWeight: 700, marginLeft: 8 }}>View on GitHub</div>
           </a>
         </div>
-        <CollectionButton />
+        {/* <CollectionButton /> */}
 
-        {/* <Snackbar /> */}
+        <Snackbar />
         <div css={{ display: "grid", gridTemplateColumns: "450px calc(100% - 450px)", width: "100%" }}>
           <Filter />
-          {/* <Header iconsNumber={icons.length} /> */}
-          {/* <ListWrapper adBlockerActive={adBlockerActive}> */}
-          {/* <SearchBar /> */}
           <ListIcons icons={icons} />
-          {/* </ListWrapper> */}
         </div>
 
         <Background />

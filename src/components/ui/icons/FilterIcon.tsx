@@ -1,6 +1,6 @@
 import React from "react";
 
-export const FilterIcon: React.FC = () => (
+export const filterIcon = (
   <svg fill="none" height="34" viewBox="0 0 30 34" width="30" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M11.7439 6.5H30V3.5H11.7439C11.1262 1.75221 9.45933 0.5 7.5 0.5C5.54067 0.5 3.87381 1.75221 3.25606 3.5H0V6.5H3.25606C3.87381 8.24779 5.54067 9.5 7.5 9.5C9.45933 9.5 11.1262 8.24779 11.7439 6.5Z"
