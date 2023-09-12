@@ -8,10 +8,32 @@ type CounterProps = {
 export const Counter: React.FC<CounterProps> = ({ value, label }) => {
   return (
     <div>
-      <p css={{ fontFamily: theme.fontFamily.cursive, color: theme.colors.primary, fontWeight: 700, fontSize: 60 }}>
+      <p
+        css={{
+          fontFamily: theme.fontFamily.cursive,
+          color: theme.colors.primary,
+          fontWeight: 700,
+          fontSize: 60,
+          transition: "all 250ms",
+          "@media (max-width: 960px)": {
+            fontSize: 32,
+          },
+        }}
+      >
         {value}
       </p>
-      <p css={{ fontWeight: 700, fontSize: 24 }}>{label}</p>
+      <p
+        css={{
+          fontWeight: 700,
+          fontSize: 24,
+          transition: "all 250ms",
+          "@media (max-width: 960px)": {
+            fontSize: 16,
+          },
+        }}
+      >
+        {label}
+      </p>
     </div>
   );
 };

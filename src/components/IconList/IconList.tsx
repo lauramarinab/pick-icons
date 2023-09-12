@@ -30,8 +30,13 @@ export const IconList: React.FC<IconListProps> = ({ icons }) => {
       css={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(95px, 1fr))",
-        gridGap: 32,
+        gap: 32,
         justifyItems: "center",
+        transition: "all 250ms",
+        "@media (max-width: 960px)": {
+          gridTemplateColumns: "repeat(auto-fit, minmax(85px, 1fr))",
+          gap: 12,
+        },
       }}
     >
       {filteredIcons.map((icon, i) => {

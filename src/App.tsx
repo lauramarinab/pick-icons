@@ -28,7 +28,11 @@ function App() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            transition: "all 250ms",
             gap: 52,
+            "@media (max-width: 960px)": {
+              gap: 32,
+            },
           }}
         >
           <h1
@@ -38,6 +42,11 @@ function App() {
               fontSize: 60,
               color: theme.colors.secondary,
               lineHeight: 1.6,
+              transition: "all 250ms",
+              "@media (max-width: 960px)": {
+                lineHeight: 1.3,
+                fontSize: 32,
+              },
             }}
           >
             Welcome to <span css={{ color: theme.colors.primary }}>PickIcons</span>, the home of exceptionally crisp and

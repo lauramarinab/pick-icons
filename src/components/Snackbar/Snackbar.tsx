@@ -20,13 +20,13 @@ const animation = (messageType: MessageType | null) => {
 
   if (messageType === "notification") {
     return {
-      hidden: { top: -80, opacity: 0 },
-      visible: { opacity: 1, top: 32 },
+      hidden: { bottom: -80, opacity: 0 },
+      visible: { opacity: 1, bottom: 32 },
     };
   } else {
     return {
-      hidden: { top: -80, opacity: 0 },
-      visible: { opacity: 1, top: 32 },
+      hidden: { bottom: -80, opacity: 0 },
+      visible: { opacity: 1, bottom: 32 },
     };
   }
 };

@@ -22,9 +22,11 @@ const Wrapper = styled.div<{ loadingIcon: boolean }>(({ loadingIcon }) => ({
   height: 95,
   transition: "all 250ms",
   filter: loadingIcon ? "blur(1px) " : "blur(0px)",
-  "&@media (max-width: 650px)": {
+  "@media (max-width: 960px)": {
     width: "100%",
-    maxWidth: "100%",
+    minWidth: 85,
+    maxWidth: 85,
+    height: 85,
   },
 }));
 
@@ -38,6 +40,10 @@ const SvgWrapper = styled(motion.div)<{ iconSet: IconSet }>({
   width: 45,
   userSelect: "none",
   WebkitUserDrag: "none",
+  transition: "all 250ms",
+  "@media (max-width: 960px)": {
+    width: 35,
+  },
 });
 
 const PlaceholderIcon = styled.div({
