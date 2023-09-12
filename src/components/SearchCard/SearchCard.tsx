@@ -20,7 +20,7 @@ const Card = styled.div({
   background: theme.colors.white,
   border: `1px solid ${theme.colors.greyscale100}`,
   minHeight: 740,
-  boxShadow: "0px 0px 20px -2px rgba(0, 0, 0, 0.10)",
+  boxShadow: "0px 0px 20px -2px rgba(0, 0, 0, 0.20)",
 });
 
 export const SearchBar: React.FC = () => {

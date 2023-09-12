@@ -1,5 +1,5 @@
 import { theme } from "./theme/tokens";
-import { Header } from "./components/Header";
+import { HEADER_HEIGHT, Header } from "./components/Header";
 
 import { Section } from "./components/Layout";
 import { Counter } from "./components/Counter";
@@ -23,7 +23,7 @@ function App() {
         <Header />
         <Section
           css={{
-            height: "calc(100vh - 104px)",
+            height: `calc(100vh - ${HEADER_HEIGHT}px)`,
             paddingBottom: 52,
             display: "flex",
             flexDirection: "column",
