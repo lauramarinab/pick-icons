@@ -64,7 +64,6 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ filename, iconUr
 
   const onDownloadIcon = () => {
     if (isProd) {
-      console.log("IS PROD -> track gtmEvent");
       gtmEvent({ eventAction: "Click", eventCategory: "download_svg_icon", eventLabel: `Download ${filename}` });
     }
 

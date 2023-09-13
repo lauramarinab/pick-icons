@@ -15,14 +15,12 @@ import { Snackbar } from "./components/Snackbar";
 import "./styles/App.css";
 import "./styles/reset.css";
 
-if (import.meta.env.GA_TRACKING_ID) {
+if (import.meta.env.VITE_GA_TRACKING_ID) {
   ReactGA.initialize(import.meta.env.VITE_GA_TRACKING_ID);
 }
 
 function App() {
   const data = dataIcons.data;
-
-  console.log(import.meta.env);
 
   return (
     <SnackbarProvider>
