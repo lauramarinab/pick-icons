@@ -8,16 +8,20 @@ import { SearchProvider } from "./context/search-context";
 import { IconList } from "./components/IconList";
 
 import dataIcons from "./data-icons.json";
-import ReactGA from "react-ga4";
+import TagManager, { TagManagerArgs } from "react-gtm-module";
+
 import { SnackbarProvider } from "./context/snackbar-context";
 import { Snackbar } from "./components/Snackbar";
 
 import "./styles/App.css";
 import "./styles/reset.css";
+import { gtmEvent } from "./utils/gtm-tracking";
 
-if (import.meta.env.VITE_GA_TRACKING_ID) {
+const GTM_IT = import.meta.env.VITE_GTM_ID;
+if (GTM_IT) {
   console.log("initialize google tag manager");
-  ReactGA.initialize(import.meta.env.VITE_GA_TRACKING_ID);
+  const tagManagerArgs: TagManagerArgs = { gtmId: GTM_IT };
+  TagManager.initialize(tagManagerArgs);
 }
 
 function App() {
@@ -75,6 +79,13 @@ function App() {
           <footer css={{ padding: "32px 0px" }}>
             Made with love by{" "}
             <a
+              onClick={() => {
+                gtmEvent({
+                  eventAction: "Click",
+                  eventCategory: "click_github_link",
+                  eventLabel: `Open github link from footer`,
+                });
+              }}
               css={{
                 fontWeight: 600,
                 ":hover": {

@@ -1,4 +1,8 @@
-import ReactGA from "react-ga4";
+export const dataLayerPush = (params: Record<string, unknown>): void => {
+  if (typeof window.dataLayer !== "undefined") {
+    window.dataLayer.push(params);
+  }
+};
 
 export type EventAction = "Click" | "Submit";
 
@@ -9,9 +13,10 @@ type UserInteractionEvent = {
 };
 
 export const gtmEvent = ({ eventAction, eventCategory, eventLabel }: UserInteractionEvent) => {
-  ReactGA.event({
-    category: eventCategory,
-    action: eventAction,
-    label: eventLabel,
+  dataLayerPush({
+    event: "user.interactions",
+    eventAction,
+    eventCategory,
+    eventLabel,
   });
 };

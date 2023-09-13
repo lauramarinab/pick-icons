@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Logo } from "./Logo";
 import { theme } from "../../theme/tokens";
 import useWindowScroll from "react-use/lib/useWindowScroll";
+import { gtmEvent } from "../../utils/gtm-tracking";
 
 export const HEADER_HEIGHT = 65;
 
@@ -27,10 +28,30 @@ export const Header: React.FC = () => {
     >
       <Logo />
       <nav css={{ display: "flex", alignItems: "center", gap: 20 }}>
-        <Link href="https://github.com/lauramarinab/pick-icons" target="_blank">
+        <Link
+          href="https://github.com/lauramarinab/pick-icons"
+          target="_blank"
+          onClick={() => {
+            gtmEvent({
+              eventAction: "Click",
+              eventCategory: "click_github_link",
+              eventLabel: `Open github link from header`,
+            });
+          }}
+        >
           View on Github
         </Link>
-        <Link href="https://www.buymeacoffee.com/lauramarinab" target="_blank">
+        <Link
+          href="https://www.buymeacoffee.com/lauramarinab"
+          target="_blank"
+          onClick={() => {
+            gtmEvent({
+              eventAction: "Click",
+              eventCategory: "click_buy_me_beer",
+              eventLabel: `Open buy me a beer link`,
+            });
+          }}
+        >
           Buy me a beer <span>🍺</span>
         </Link>
       </nav>

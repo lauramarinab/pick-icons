@@ -5,3 +5,9 @@ export type Icon = {
   metadata: Array<string>;
   categories: Array<string>;
 };
+
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[];
+  }
+}
