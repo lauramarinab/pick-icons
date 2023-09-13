@@ -2,16 +2,24 @@ import styled from "@emotion/styled";
 import { useSnackbar } from "../../context/snackbar-context";
 import { motion } from "framer-motion";
 import { theme } from "../../theme/tokens";
+import { isProduction } from "../../utils/app-env";
+import { gtmEvent } from "../../utils/gtm-tracking";
 
 type CopyButtonProps = {
   iconUrlSrc: string;
+  filename: string;
 };
 
-export const CopyButton: React.FC<CopyButtonProps> = ({ iconUrlSrc }) => {
+export const CopyButton: React.FC<CopyButtonProps> = ({ iconUrlSrc, filename }) => {
   const { onOpenSnackbar } = useSnackbar();
   const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
+  const isProd = isProduction();
 
   const onCopySvg = () => {
+    if (isProd) {
+      gtmEvent({ eventAction: "Click", eventCategory: "copy_svg_icon", eventLabel: `Copy ${filename}` });
+    }
+
     const xhr = new XMLHttpRequest();
     xhr.open("GET", downloadUrl);
     xhr.send();
@@ -52,8 +60,14 @@ type DownloadButtonProps = {
 export const DownloadButton: React.FC<DownloadButtonProps> = ({ filename, iconUrlSrc }) => {
   const { onOpenSnackbar } = useSnackbar();
   const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
+  const isProd = isProduction();
 
   const onDownloadIcon = () => {
+    if (isProd) {
+      console.log("IS PROD -> track gtmEvent");
+      gtmEvent({ eventAction: "Click", eventCategory: "download_svg_icon", eventLabel: `Download ${filename}` });
+    }
+
     const xhr = new XMLHttpRequest();
     xhr.open("GET", downloadUrl);
     xhr.send();

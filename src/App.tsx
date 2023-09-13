@@ -8,14 +8,22 @@ import { SearchProvider } from "./context/search-context";
 import { IconList } from "./components/IconList";
 
 import dataIcons from "./data-icons.json";
-
-import "./styles/App.css";
-import "./styles/reset.css";
+import ReactGA from "react-ga4";
 import { SnackbarProvider } from "./context/snackbar-context";
 import { Snackbar } from "./components/Snackbar";
 
+import "./styles/App.css";
+import "./styles/reset.css";
+
+if (import.meta.env.GA_TRACKING_ID) {
+  ReactGA.initialize(import.meta.env.GA_TRACKING_ID);
+}
+
 function App() {
   const data = dataIcons.data;
+
+  console.log(import.meta.env);
+
   return (
     <SnackbarProvider>
       <Snackbar />

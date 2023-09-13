@@ -104,7 +104,7 @@ export const CardIcon: React.FC<CardIconProps> = ({ iconUrlSrc, iconName, filena
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            <CopyButton iconUrlSrc={iconUrlSrc} />
+            <CopyButton iconUrlSrc={iconUrlSrc} filename={filename} />
             <DownloadButton filename={filename} iconUrlSrc={iconUrlSrc} />
           </WrapperButton>
         )}
