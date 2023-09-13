@@ -16,6 +16,7 @@ import "./styles/App.css";
 import "./styles/reset.css";
 
 if (import.meta.env.VITE_GA_TRACKING_ID) {
+  console.log("initialize google tag manager");
   ReactGA.initialize(import.meta.env.VITE_GA_TRACKING_ID);
 }
 
