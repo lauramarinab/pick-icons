@@ -23,7 +23,7 @@ function App() {
         <Header />
         <Section
           css={{
-            height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+            height: `calc(100svh - ${HEADER_HEIGHT}px)`,
             paddingBottom: 52,
             display: "flex",
             flexDirection: "column",
@@ -54,7 +54,7 @@ function App() {
           </h1>
           <div css={{ display: "flex", alignItems: "center", gap: 32 }}>
             <Counter value={data.icons.length} label="Icons" />
-            <Counter value={data.categories_count} label="Categories" />
+            <Counter value={data.categories_count} label={data.categories_count > 1 ? "Categories" : "Category"} />
           </div>
         </Section>
         <Section css={{ marginBottom: 64 }}>

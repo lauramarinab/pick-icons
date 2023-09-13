@@ -9,8 +9,7 @@ const Wrapper = styled(motion.div)<{ messageType: MessageType }>(({ messageType 
   padding: 12,
   position: "fixed",
   right: 32,
-  fontWeight: 700,
-  fontSize: 12,
+  fontSize: 14,
   zIndex: 1,
   color: messageType === "error" ? theme.colors.white : undefined,
 }));
