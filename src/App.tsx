@@ -16,7 +16,7 @@ import "./styles/App.css";
 import "./styles/reset.css";
 
 if (import.meta.env.GA_TRACKING_ID) {
-  ReactGA.initialize(import.meta.env.GA_TRACKING_ID);
+  ReactGA.initialize(import.meta.env.VITE_GA_TRACKING_ID);
 }
 
 function App() {
