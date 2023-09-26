@@ -625,11 +625,6 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-gtm-module@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@types/react-gtm-module/-/react-gtm-module-2.0.1.tgz#b2c6cd14ec251d6ae7fa576edf1d43825908a378"
-  integrity sha512-T/DN9gAbCYk5wJ1nxf4pSwmXz4d1iVjM++OoG+mwMfz9STMAotGjSb65gJHOS5bPvl6vLSsJnuC+y/43OQrltg==
-
 "@types/react@*", "@types/react@^18.2.15":
   version "18.2.21"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.21.tgz#774c37fd01b522d0b91aed04811b58e4e0514ed9"
@@ -1718,10 +1713,10 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-gtm-module@^2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/react-gtm-module/-/react-gtm-module-2.0.11.tgz#14484dac8257acd93614e347c32da9c5ac524206"
-  integrity sha512-8gyj4TTxeP7eEyc2QKawEuQoAZdjKvMY4pgWfycGmqGByhs17fR+zEBs0JUDq4US/l+vbTl+6zvUIx27iDo/Vw==
+react-ga4@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-ga4/-/react-ga4-2.1.0.tgz#56601f59d95c08466ebd6edfbf8dede55c4678f9"
+  integrity sha512-ZKS7PGNFqqMd3PJ6+C2Jtz/o1iU9ggiy8Y8nUeksgVuvNISbmrQtJiZNvC/TjDsqD0QlU5Wkgs7i+w9+OjHhhQ==
 
 react-is@^16.7.0:
   version "16.13.1"

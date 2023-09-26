@@ -8,21 +8,13 @@ import { SearchProvider } from "./context/search-context";
 import { IconList } from "./components/IconList";
 
 import dataIcons from "./data-icons.json";
-import TagManager, { TagManagerArgs } from "react-gtm-module";
 
 import { SnackbarProvider } from "./context/snackbar-context";
 import { Snackbar } from "./components/Snackbar";
+import { gtmEvent } from "./utils/gtm-tracking";
 
 import "./styles/App.css";
 import "./styles/reset.css";
-import { gtmEvent } from "./utils/gtm-tracking";
-
-const GTM_IT = import.meta.env.VITE_GTM_ID;
-if (GTM_IT) {
-  console.log("initialize google tag manager");
-  const tagManagerArgs: TagManagerArgs = { gtmId: GTM_IT };
-  TagManager.initialize(tagManagerArgs);
-}
 
 function App() {
   const data = dataIcons.data;
