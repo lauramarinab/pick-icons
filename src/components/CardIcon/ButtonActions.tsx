@@ -14,7 +14,7 @@ export const CopyButton: React.FC<CopyButtonProps> = ({ iconUrlSrc, filename }) 
   const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
 
   const onCopySvg = () => {
-    gtmEvent({ eventAction: "Click", eventCategory: "copy_svg_icon", eventLabel: `Copy ${filename}` });
+    gtmEvent({ eventAction: "Click", eventName: "copy_svg_icon", eventLabel: `Copy ${filename}` });
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", downloadUrl);
@@ -58,7 +58,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ filename, iconUr
   const downloadUrl = `https://raw.githubusercontent.com/lauramarinab/pick-icons/main/public${iconUrlSrc}`;
 
   const onDownloadIcon = () => {
-    gtmEvent({ eventAction: "Click", eventCategory: "download_svg_icon", eventLabel: `Download ${filename}` });
+    gtmEvent({ eventAction: "Click", eventName: "download_svg_icon", eventLabel: `Download ${filename}` });
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", downloadUrl);

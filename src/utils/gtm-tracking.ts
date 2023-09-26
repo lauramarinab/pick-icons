@@ -3,16 +3,16 @@ import ReactGA from "react-ga4";
 export type EventAction = "Click" | "Submit";
 
 type UserInteractionEvent = {
-  eventName?: string;
+  eventName: string;
   eventAction: EventAction;
-  eventCategory: string;
+  eventCategory?: string;
   eventLabel?: string;
 };
 
 export const gtmEvent = ({
-  eventName = "user_interactions",
+  eventName,
   eventAction,
-  eventCategory,
+  eventCategory = "user_interactions",
   eventLabel,
 }: UserInteractionEvent) => {
   ReactGA.event(eventName, {

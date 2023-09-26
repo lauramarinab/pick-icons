@@ -74,7 +74,7 @@ function App() {
               onClick={() => {
                 gtmEvent({
                   eventAction: "Click",
-                  eventCategory: "click_github_link",
+                  eventName: "click_github_link",
                   eventLabel: `Open github link from footer`,
                 });
               }}

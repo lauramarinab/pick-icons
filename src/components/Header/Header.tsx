@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
           onClick={() => {
             gtmEvent({
               eventAction: "Click",
-              eventCategory: "click_github_link",
+              eventName: "click_github_link",
               eventLabel: `Open github link from header`,
             });
           }}
@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
           onClick={() => {
             gtmEvent({
               eventAction: "Click",
-              eventCategory: "click_buy_me_beer",
+              eventName: "click_buy_me_beer",
               eventLabel: `Open buy me a beer link`,
             });
           }}
