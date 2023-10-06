@@ -99,6 +99,7 @@ const downloadBlob = (blob: Blob, filename: string) => {
 const Button = styled(motion.button)({
   width: "100%",
   height: "100%",
+  maxHeight: "45px",
   transition: "all 200ms",
   background: "rgba(13, 71, 161, 0.35)",
   color: theme.colors.white,

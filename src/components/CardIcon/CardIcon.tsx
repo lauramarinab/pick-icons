@@ -99,6 +99,11 @@ export const CardIcon: React.FC<CardIconProps> = ({ iconUrlSrc, iconName, filena
       <AnimatePresence>
         {hover && (
           <WrapperButton
+            css={{
+              "@media (max-width: 960px)": {
+                display: "none",
+              },
+            }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
