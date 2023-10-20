@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useSnackbar } from "../../context/snackbar-context";
 import { theme } from "../../theme/tokens";
 import { gtmEvent } from "../../utils/gtm-tracking";
+import { trackFullstoryEvent } from "../../utils/fullstory-tracking";
 
 type CopyButtonProps = {
   iconUrlSrc: string;
@@ -15,6 +16,7 @@ export const CopyButton: React.FC<CopyButtonProps> = ({ iconUrlSrc, filename }) 
 
   const onCopySvg = () => {
     gtmEvent({ eventAction: "Click", eventName: "copy_svg_icon", eventLabel: `Copy ${filename}` });
+    trackFullstoryEvent("copy_svg_icon", { filename });
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", downloadUrl);
@@ -59,6 +61,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ filename, iconUr
 
   const onDownloadIcon = () => {
     gtmEvent({ eventAction: "Click", eventName: "download_svg_icon", eventLabel: `Download ${filename}` });
+    trackFullstoryEvent("download_svg_icon", { filename });
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", downloadUrl);
