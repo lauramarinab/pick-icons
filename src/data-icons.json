@@ -266,8 +266,78 @@
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/waves.svg",
         "metadata": ["waves", "sea"]
+      },
+      {
+        "name": "avocado",
+        "filename": "avocado-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/avocado.svg",
+        "metadata": ["avocado", "vegetables", "food", "verdura", "frutta"]
+      },
+      {
+        "name": "broccoli",
+        "filename": "broccoli-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/broccoli.svg",
+        "metadata": ["broccoli", "food", "broccolo", "verdura", "vegetables"]
+      },
+      {
+        "name": "cabbage",
+        "filename": "cabbage-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/cabbage.svg",
+        "metadata": ["cabbage", "cavolo", "food", "verdura", "vegetables"]
+      },
+      {
+        "name": "carrot",
+        "filename": "carrot-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/carrot.svg",
+        "metadata": ["carrot", "carota", "carote", "food", "verdura", "vegetables"]
+      },
+      {
+        "name": "eggplant",
+        "filename": "eggplant-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/eggplant.svg",
+        "metadata": ["eggplant", "food", "melanzana", "verdura", "vegetables"]
+      },
+      {
+        "name": "mushrooms",
+        "filename": "mushrooms-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/mushrooms.svg",
+        "metadata": ["mushrooms", "funghi", "fungo", "food", "verdura", "vegetables"]
+      },
+      {
+        "name": "pepper",
+        "filename": "pepper-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/pepper.svg",
+        "metadata": ["pepper", "peperone", "peperoni", "food", "verdura", "vegetables"]
+      },
+      {
+        "name": "pizza",
+        "filename": "pizza-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/pizza.svg",
+        "metadata": ["pizza", "food"]
+      },
+      {
+        "name": "table cutlery 1",
+        "filename": "table-cutlery-1-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/table-cutlery-1.svg",
+        "metadata": ["table-cutlery-1", "posate", "forchetta", "coltello"]
+      },
+      {
+        "name": "table cutlery 2",
+        "filename": "table-cutlery-2-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/table-cutlery-2.svg",
+        "metadata": ["table-cutlery-2", "posate", "forchetta", "coltello", "cucchiaio"]
       }
     ],
-    "categories_count": 3
+    "categories_count": 4
   }
 }

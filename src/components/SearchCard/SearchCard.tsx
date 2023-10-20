@@ -39,12 +39,13 @@ export const SearchBar: React.FC = () => {
 
 const InputSearch = styled.input({
   background: "transparent",
-  padding: 12,
+  padding: 20,
   borderBottom: `1px solid ${theme.colors.greyscale100}`,
   width: "100%",
   borderRadius: "8px 8px 0px 0px",
   transition: "background 200ms",
-  ":focus-visible": {
+  fontSize: 16,
+  ":hover, :focus ,:focus-visible": {
     outline: "none",
     background: theme.colors.highlight,
   },
