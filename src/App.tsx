@@ -57,7 +57,6 @@ function App() {
           </h1>
           <div css={{ display: "flex", alignItems: "center", gap: 32 }}>
             <Counter value={data.icons.length} label="Icons" />
-            <Counter value={data.categories_count} label={data.categories_count > 1 ? "Categories" : "Category"} />
           </div>
         </Section>
         <Section css={{ marginBottom: 64 }}>

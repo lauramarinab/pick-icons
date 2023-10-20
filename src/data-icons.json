@@ -1,1 +1,273 @@
-{"data":{"icons":[{"name":"copy","filename":"copy-outline.svg","categories":["outline","objects"],"urlSrc":"/svg/outline/objects/copy.svg","metadata":["copy"]},{"name":"download","filename":"download-outline.svg","categories":["outline","objects"],"urlSrc":"/svg/outline/objects/download.svg","metadata":["download"]},{"name":"cassette","filename":"cassette-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/cassette.svg","metadata":["cassette"]},{"name":"cd","filename":"cd-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/cd.svg","metadata":["cd"]},{"name":"database add","filename":"database-add-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/database-add.svg","metadata":["database-add"]},{"name":"database download","filename":"database-download-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/database-download.svg","metadata":["database-download"]},{"name":"database remove","filename":"database-remove-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/database-remove.svg","metadata":["database-remove"]},{"name":"database upload","filename":"database-upload-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/database-upload.svg","metadata":["database-upload"]},{"name":"database","filename":"database-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/database.svg","metadata":["database"]},{"name":"file csv","filename":"file-csv-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file-csv.svg","metadata":["file-csv"]},{"name":"file image","filename":"file-image-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file-image.svg","metadata":["file-image"]},{"name":"file jpg","filename":"file-jpg-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file-jpg.svg","metadata":["file-jpg"]},{"name":"file music","filename":"file-music-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file-music.svg","metadata":["file-music"]},{"name":"file pdf","filename":"file-pdf-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file-pdf.svg","metadata":["file-pdf"]},{"name":"file video","filename":"file-video-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file-video.svg","metadata":["file-video"]},{"name":"file word","filename":"file-word-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file-word.svg","metadata":["file-word"]},{"name":"file","filename":"file-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/file.svg","metadata":["file"]},{"name":"floppy","filename":"floppy-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/floppy.svg","metadata":["floppy"]},{"name":"folder favorite","filename":"folder-favorite-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/folder-favorite.svg","metadata":["folder-favorite"]},{"name":"folder open favorite","filename":"folder-open-favorite-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/folder-open-favorite.svg","metadata":["folder-open-favorite"]},{"name":"folder open","filename":"folder-open-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/folder-open.svg","metadata":["folder-open"]},{"name":"folder","filename":"folder-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/folder.svg","metadata":["folder"]},{"name":"imac","filename":"imac-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/imac.svg","metadata":["imac"]},{"name":"macbook","filename":"macbook-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/macbook.svg","metadata":["macbook"]},{"name":"mouse apple","filename":"mouse-apple-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/mouse-apple.svg","metadata":["mouse-apple"]},{"name":"mouse wifi","filename":"mouse-wifi-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/mouse-wifi.svg","metadata":["mouse-wifi"]},{"name":"mouse wired","filename":"mouse-wired-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/mouse-wired.svg","metadata":["mouse-wired"]},{"name":"mouse","filename":"mouse-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/mouse.svg","metadata":["mouse"]},{"name":"object","filename":"object-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/object.svg","metadata":["object"]},{"name":"pen tablet","filename":"pen-tablet-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/pen-tablet.svg","metadata":["pen-tablet"]},{"name":"phone","filename":"phone-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/phone.svg","metadata":["phone"]},{"name":"server add","filename":"server-add-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/server-add.svg","metadata":["server-add"]},{"name":"server download","filename":"server-download-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/server-download.svg","metadata":["server-download"]},{"name":"server remove","filename":"server-remove-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/server-remove.svg","metadata":["server-remove"]},{"name":"server upload","filename":"server-upload-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/server-upload.svg","metadata":["server-upload"]},{"name":"server","filename":"server-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/server.svg","metadata":["server"]},{"name":"tablet","filename":"tablet-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/tablet.svg","metadata":["tablet"]},{"name":"tag","filename":"tag-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/tag.svg","metadata":["tag"]},{"name":"wifi","filename":"wifi-outline.svg","categories":["outline","tech-device"],"urlSrc":"/svg/outline/tech-device/wifi.svg","metadata":["wifi"]},{"name":"balcony bra","filename":"balcony-bra-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/balcony-bra.svg","metadata":["balcony-bra"]},{"name":"bikini","filename":"bikini-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/bikini.svg","metadata":["bikini"]},{"name":"bodysuit","filename":"bodysuit-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/bodysuit.svg","metadata":["bodysuit"]},{"name":"boxer","filename":"boxer-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/boxer.svg","metadata":["boxer"]},{"name":"bralette","filename":"bralette-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/bralette.svg","metadata":["bralette"]},{"name":"corset bra","filename":"corset-bra-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/corset-bra.svg","metadata":["corset-bra"]},{"name":"culottes","filename":"culottes-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/culottes.svg","metadata":["culottes"]},{"name":"push up bra","filename":"push-up-bra-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/push-up-bra.svg","metadata":["push-up-bra"]},{"name":"slip","filename":"slip-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/slip.svg","metadata":["slip"]},{"name":"sports bra","filename":"sports-bra-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/sports-bra.svg","metadata":["sports-bra"]},{"name":"string","filename":"string-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/string.svg","metadata":["string"]},{"name":"triangle bra","filename":"triangle-bra-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/triangle-bra.svg","metadata":["triangle-bra"]},{"name":"triangle swimwear","filename":"triangle-swimwear-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/triangle-swimwear.svg","metadata":["triangle-swimwear"]},{"name":"tshirt bra","filename":"tshirt-bra-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/tshirt-bra.svg","metadata":["tshirt-bra"]},{"name":"fitted tshirt","filename":"fitted-tshirt-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/fitted-tshirt.svg","metadata":["fitted-tshirt"]},{"name":"long sleeve shirt","filename":"long-sleeve-shirt-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/long-sleeve-shirt.svg","metadata":["long-sleeve-shirt"]},{"name":"nightie","filename":"nightie-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/nightie.svg","metadata":["nightie"]},{"name":"sweatshirt","filename":"sweatshirt-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/sweatshirt.svg","metadata":["sweatshirt"]},{"name":"tanktop","filename":"tanktop-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/tanktop.svg","metadata":["tanktop"]},{"name":"tight long sleeve shirt","filename":"tight-long-sleeve-shirt-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/tight-long-sleeve-shirt.svg","metadata":["tight-long-sleeve-shirt"]},{"name":"tight tanktop","filename":"tight-tanktop-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/tight-tanktop.svg","metadata":["tight-tanktop"]},{"name":"tshirt","filename":"tshirt-outline.svg","categories":["outline","clothes"],"urlSrc":"/svg/outline/clothes/tshirt.svg","metadata":["tshirt"]}],"categories_count":3}}
+{
+  "data": {
+    "icons": [
+      {
+        "name": "copy",
+        "filename": "copy-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/copy.svg",
+        "metadata": ["copy"]
+      },
+      {
+        "name": "download",
+        "filename": "download-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/download.svg",
+        "metadata": ["download"]
+      },
+      {
+        "name": "balcony bra",
+        "filename": "balcony-bra-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/balcony-bra.svg",
+        "metadata": ["balcony-bra", "clothes"]
+      },
+      {
+        "name": "bikini",
+        "filename": "bikini-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/bikini.svg",
+        "metadata": ["bikini", "clothes"]
+      },
+      {
+        "name": "bodysuit",
+        "filename": "bodysuit-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/bodysuit.svg",
+        "metadata": ["bodysuit", "clothes"]
+      },
+      {
+        "name": "boxer",
+        "filename": "boxer-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/boxer.svg",
+        "metadata": ["boxer", "clothes"]
+      },
+      {
+        "name": "bralette",
+        "filename": "bralette-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/bralette.svg",
+        "metadata": ["bralette", "clothes"]
+      },
+      {
+        "name": "corset bra",
+        "filename": "corset-bra-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/corset-bra.svg",
+        "metadata": ["corset-bra", "clothes"]
+      },
+      {
+        "name": "culottes",
+        "filename": "culottes-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/culottes.svg",
+        "metadata": ["culottes", "clothes"]
+      },
+      {
+        "name": "push up bra",
+        "filename": "push-up-bra-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/push-up-bra.svg",
+        "metadata": ["push-up-bra", "clothes"]
+      },
+      {
+        "name": "slip",
+        "filename": "slip-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/slip.svg",
+        "metadata": ["slip", "clothes"]
+      },
+      {
+        "name": "sports bra",
+        "filename": "sports-bra-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/sports-bra.svg",
+        "metadata": ["sports-bra", "clothes"]
+      },
+      {
+        "name": "string",
+        "filename": "string-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/string.svg",
+        "metadata": ["string", "clothes"]
+      },
+      {
+        "name": "triangle bra",
+        "filename": "triangle-bra-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/triangle-bra.svg",
+        "metadata": ["triangle-bra", "clothes"]
+      },
+      {
+        "name": "triangle swimwear",
+        "filename": "triangle-swimwear-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/triangle-swimwear.svg",
+        "metadata": ["triangle-swimwear", "clothes"]
+      },
+      {
+        "name": "tshirt bra",
+        "filename": "tshirt-bra-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/tshirt-bra.svg",
+        "metadata": ["tshirt-bra", "clothes"]
+      },
+      {
+        "name": "fitted tshirt",
+        "filename": "fitted-tshirt-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/fitted-tshirt.svg",
+        "metadata": ["fitted-tshirt", "clothes"]
+      },
+      {
+        "name": "long sleeve shirt",
+        "filename": "long-sleeve-shirt-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/long-sleeve-shirt.svg",
+        "metadata": ["long-sleeve-shirt", "clothes"]
+      },
+      {
+        "name": "nightie",
+        "filename": "nightie-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/nightie.svg",
+        "metadata": ["nightie", "clothes"]
+      },
+      {
+        "name": "sweatshirt",
+        "filename": "sweatshirt-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/sweatshirt.svg",
+        "metadata": ["sweatshirt", "clothes"]
+      },
+      {
+        "name": "tanktop",
+        "filename": "tanktop-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/tanktop.svg",
+        "metadata": ["tanktop", "clothes"]
+      },
+      {
+        "name": "tight long sleeve shirt",
+        "filename": "tight-long-sleeve-shirt-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/tight-long-sleeve-shirt.svg",
+        "metadata": ["tight-long-sleeve-shirt", "clothes"]
+      },
+      {
+        "name": "tight tanktop",
+        "filename": "tight-tanktop-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/tight-tanktop.svg",
+        "metadata": ["tight-tanktop", "clothes"]
+      },
+      {
+        "name": "tshirt",
+        "filename": "tshirt-outline.svg",
+        "categories": ["outline", "clothes"],
+        "urlSrc": "/svg/outline/clothes/tshirt.svg",
+        "metadata": ["tshirt", "clothes"]
+      },
+      {
+        "name": "anchor",
+        "filename": "anchor-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/anchor.svg",
+        "metadata": ["anchor", "sea"]
+      },
+      {
+        "name": "bubbles",
+        "filename": "bubbles-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/bubbles.svg",
+        "metadata": ["bubbles", "sea"]
+      },
+      {
+        "name": "jellyfish 1",
+        "filename": "jellyfish-1-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/jellyfish-1.svg",
+        "metadata": ["jellyfish-1", "sea"]
+      },
+      {
+        "name": "jellyfish 2",
+        "filename": "jellyfish-2-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/jellyfish-2.svg",
+        "metadata": ["jellyfish-2", "sea"]
+      },
+      {
+        "name": "octopus",
+        "filename": "octopus-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/octopus.svg",
+        "metadata": ["octopus", "sea"]
+      },
+      {
+        "name": "sail boat",
+        "filename": "sail-boat-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/sail-boat.svg",
+        "metadata": ["sail-boat", "sea"]
+      },
+      {
+        "name": "scuba fins",
+        "filename": "scuba-fins-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/scuba-fins.svg",
+        "metadata": ["scuba-fins", "sea", "diving"]
+      },
+      {
+        "name": "scuba mask",
+        "filename": "scuba-mask-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/scuba-mask.svg",
+        "metadata": ["scuba-mask", "sea", "diving"]
+      },
+      {
+        "name": "scuba tank",
+        "filename": "scuba-tank-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/scuba-tank.svg",
+        "metadata": ["scuba-tank", "sea", "diving"]
+      },
+      {
+        "name": "sea turtle",
+        "filename": "sea-turtle-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/sea-turtle.svg",
+        "metadata": ["sea-turtle", "sea"]
+      },
+      {
+        "name": "shark",
+        "filename": "shark-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/shark.svg",
+        "metadata": ["shark", "sea"]
+      },
+      {
+        "name": "shell",
+        "filename": "shell-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/shell.svg",
+        "metadata": ["shell", "sea"]
+      },
+      {
+        "name": "speedboat",
+        "filename": "speedboat-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/speedboat.svg",
+        "metadata": ["speedboat", "sea"]
+      },
+      {
+        "name": "waves",
+        "filename": "waves-outline.svg",
+        "categories": ["outline", "sea"],
+        "urlSrc": "/svg/outline/sea/waves.svg",
+        "metadata": ["waves", "sea"]
+      }
+    ],
+    "categories_count": 3
+  }
+}
