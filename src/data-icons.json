@@ -363,7 +363,7 @@
         "filename": "pumpkin-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/pumpkin.svg",
-        "metadata": ["pumpkin", "zucca", "halloween"]
+        "metadata": ["pumpkin", "zucca", "halloween", "autunno", "autumn"]
       },
       {
         "name": "ghost",
@@ -399,6 +399,48 @@
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/sun.svg",
         "metadata": ["sun", "light", "sole", "theme"]
+      },
+      {
+        "name": "chestnut",
+        "filename": "chestnut-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/chestnut.svg",
+        "metadata": ["chestnut", "castagna", "autunno", "autumn"]
+      },
+      {
+        "name": "user circle",
+        "filename": "user-circle-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/user-circle.svg",
+        "metadata": ["user-circle", "user"]
+      },
+      {
+        "name": "user minus",
+        "filename": "user-minus-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/user-minus.svg",
+        "metadata": ["user-minus", "utente", "meno", "togli", "minus"]
+      },
+      {
+        "name": "user plus",
+        "filename": "user-plus-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/user-plus.svg",
+        "metadata": ["user-plus", "utente", "aggiungi", "più", "plus"]
+      },
+      {
+        "name": "user",
+        "filename": "user-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/user.svg",
+        "metadata": ["user", "utente"]
+      },
+      {
+        "name": "users",
+        "filename": "users-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/users.svg",
+        "metadata": ["users", "utenti"]
       }
     ],
     "categories_count": 5
