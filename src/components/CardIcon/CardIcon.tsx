@@ -93,7 +93,7 @@ export const CardIcon: React.FC<CardIconProps> = ({ iconUrlSrc, iconName, filena
       <SvgWrapper
         id={svgWrapperId}
         animate={!loadingIcon ? "visible" : "hidden"}
-        variants={{ visible: { opacity: 1, scale: 1.1 }, hidden: { opacity: 0, scale: 0 } }}
+        variants={{ visible: { opacity: 1, scale: 1 }, hidden: { opacity: 0, scale: 0 } }}
         transition={{ duration: 0.3 }}
       />
       <AnimatePresence>

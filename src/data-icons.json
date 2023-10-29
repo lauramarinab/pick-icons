@@ -6,14 +6,14 @@
         "filename": "copy-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/copy.svg",
-        "metadata": ["copy"]
+        "metadata": ["copy", "action", "copiare"]
       },
       {
         "name": "download",
         "filename": "download-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/download.svg",
-        "metadata": ["download"]
+        "metadata": ["download", "action", "scaricare"]
       },
       {
         "name": "balcony bra",
@@ -174,154 +174,154 @@
         "filename": "anchor-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/anchor.svg",
-        "metadata": ["anchor", "sea"]
+        "metadata": ["anchor", "sea", "mare", "ancora"]
       },
       {
         "name": "bubbles",
         "filename": "bubbles-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/bubbles.svg",
-        "metadata": ["bubbles", "sea"]
+        "metadata": ["bubbles", "sea", "mare", "bolle", "sapone"]
       },
       {
         "name": "jellyfish 1",
         "filename": "jellyfish-1-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/jellyfish-1.svg",
-        "metadata": ["jellyfish-1", "sea"]
+        "metadata": ["jellyfish-1", "sea", "mare", "medusa"]
       },
       {
         "name": "jellyfish 2",
         "filename": "jellyfish-2-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/jellyfish-2.svg",
-        "metadata": ["jellyfish-2", "sea"]
+        "metadata": ["jellyfish-2", "sea", "mare", "medusa"]
       },
       {
         "name": "octopus",
         "filename": "octopus-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/octopus.svg",
-        "metadata": ["octopus", "sea"]
+        "metadata": ["octopus", "sea", "mare"]
       },
       {
         "name": "sail boat",
         "filename": "sail-boat-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/sail-boat.svg",
-        "metadata": ["sail-boat", "sea"]
+        "metadata": ["sail-boat", "sea", "mare", "barca a vela"]
       },
       {
         "name": "scuba fins",
         "filename": "scuba-fins-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/scuba-fins.svg",
-        "metadata": ["scuba-fins", "sea", "diving"]
+        "metadata": ["scuba-fins", "sea", "diving", "mare"]
       },
       {
         "name": "scuba mask",
         "filename": "scuba-mask-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/scuba-mask.svg",
-        "metadata": ["scuba-mask", "sea", "diving"]
+        "metadata": ["scuba-mask", "sea", "diving", "mare"]
       },
       {
         "name": "scuba tank",
         "filename": "scuba-tank-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/scuba-tank.svg",
-        "metadata": ["scuba-tank", "sea", "diving"]
+        "metadata": ["scuba-tank", "sea", "diving", "mare"]
       },
       {
         "name": "sea turtle",
         "filename": "sea-turtle-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/sea-turtle.svg",
-        "metadata": ["sea-turtle", "sea"]
+        "metadata": ["sea-turtle", "sea", "mare"]
       },
       {
         "name": "shark",
         "filename": "shark-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/shark.svg",
-        "metadata": ["shark", "sea"]
+        "metadata": ["shark", "sea", "mare"]
       },
       {
         "name": "shell",
         "filename": "shell-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/shell.svg",
-        "metadata": ["shell", "sea"]
+        "metadata": ["shell", "sea", "mare"]
       },
       {
         "name": "speedboat",
         "filename": "speedboat-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/speedboat.svg",
-        "metadata": ["speedboat", "sea"]
+        "metadata": ["speedboat", "sea", "mare", "barca a motore"]
       },
       {
         "name": "waves",
         "filename": "waves-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/waves.svg",
-        "metadata": ["waves", "sea"]
+        "metadata": ["waves", "sea", "mare"]
       },
       {
         "name": "avocado",
         "filename": "avocado-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/avocado.svg",
-        "metadata": ["avocado", "vegetables", "food", "verdura", "frutta"]
+        "metadata": ["avocado", "vegetables", "food", "cibo", "verdura", "frutta"]
       },
       {
         "name": "broccoli",
         "filename": "broccoli-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/broccoli.svg",
-        "metadata": ["broccoli", "food", "broccolo", "verdura", "vegetables"]
+        "metadata": ["broccoli", "food", "cibo", "broccolo", "verdura", "vegetables"]
       },
       {
         "name": "cabbage",
         "filename": "cabbage-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/cabbage.svg",
-        "metadata": ["cabbage", "cavolo", "food", "verdura", "vegetables"]
+        "metadata": ["cabbage", "cavolo", "food", "cibo", "verdura", "vegetables"]
       },
       {
         "name": "carrot",
         "filename": "carrot-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/carrot.svg",
-        "metadata": ["carrot", "carota", "carote", "food", "verdura", "vegetables"]
+        "metadata": ["carrot", "carota", "carote", "food", "cibo", "verdura", "vegetables"]
       },
       {
         "name": "eggplant",
         "filename": "eggplant-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/eggplant.svg",
-        "metadata": ["eggplant", "food", "melanzana", "verdura", "vegetables"]
+        "metadata": ["eggplant", "food", "cibo", "melanzana", "verdura", "vegetables"]
       },
       {
         "name": "mushrooms",
         "filename": "mushrooms-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/mushrooms.svg",
-        "metadata": ["mushrooms", "funghi", "fungo", "food", "verdura", "vegetables"]
+        "metadata": ["mushrooms", "funghi", "fungo", "food", "cibo", "verdura", "vegetables"]
       },
       {
         "name": "pepper",
         "filename": "pepper-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/pepper.svg",
-        "metadata": ["pepper", "peperone", "peperoni", "food", "verdura", "vegetables"]
+        "metadata": ["pepper", "peperone", "peperoni", "food", "cibo", "verdura", "vegetables"]
       },
       {
         "name": "pizza",
         "filename": "pizza-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/pizza.svg",
-        "metadata": ["pizza", "food"]
+        "metadata": ["pizza", "food", "cibo"]
       },
       {
         "name": "table cutlery 1",
@@ -336,8 +336,71 @@
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/table-cutlery-2.svg",
         "metadata": ["table-cutlery-2", "posate", "forchetta", "coltello", "cucchiaio"]
+      },
+      {
+        "name": "beer",
+        "filename": "beer-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/beer.svg",
+        "metadata": ["beer"]
+      },
+      {
+        "name": "fries",
+        "filename": "fries-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/fries.svg",
+        "metadata": ["fries", "patatine fritte", "food", "cibo", "junk food"]
+      },
+      {
+        "name": "hamburger",
+        "filename": "hamburger-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/hamburger.svg",
+        "metadata": ["hamburger", "food", "cibo", "junk food"]
+      },
+      {
+        "name": "pumpkin",
+        "filename": "pumpkin-outline.svg",
+        "categories": ["outline", "foods"],
+        "urlSrc": "/svg/outline/foods/pumpkin.svg",
+        "metadata": ["pumpkin", "zucca", "halloween"]
+      },
+      {
+        "name": "ghost",
+        "filename": "ghost-outline.svg",
+        "categories": ["outline", "holiday"],
+        "urlSrc": "/svg/outline/holiday/ghost.svg",
+        "metadata": ["ghost", "halloween", "fantasma"]
+      },
+      {
+        "name": "empty heart",
+        "filename": "empty-heart-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/empty-heart.svg",
+        "metadata": ["empty-heart", "love", "cuore", "amore"]
+      },
+      {
+        "name": "full heart",
+        "filename": "full-heart-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/full-heart.svg",
+        "metadata": ["full-heart", "love", "cuore", "amore"]
+      },
+      {
+        "name": "moon",
+        "filename": "moon-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/moon.svg",
+        "metadata": ["moon", "dark", "luna", "theme"]
+      },
+      {
+        "name": "sun",
+        "filename": "sun-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/sun.svg",
+        "metadata": ["sun", "light", "sole", "theme"]
       }
     ],
-    "categories_count": 4
+    "categories_count": 5
   }
 }
