@@ -46,9 +46,13 @@ function App() {
               color: theme.colors.secondary,
               lineHeight: 1.6,
               transition: "all 250ms",
-              "@media (max-width: 960px)": {
+              "@media (max-width: 960px), (max-height: 700px)": {
                 lineHeight: 1.3,
                 fontSize: 32,
+              },
+              "@media (max-height: 400px)": {
+                lineHeight: 1.3,
+                fontSize: 24,
               },
             }}
           >

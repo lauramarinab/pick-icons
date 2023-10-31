@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
-import { CopyButton, DownloadButton } from "./ButtonActions";
 import capitalize from "lodash/capitalize";
+import { useEffect, useId, useState } from "react";
+import { CopyButton, DownloadButton } from "./ButtonActions";
 
 const Wrapper = styled.div<{ loadingIcon: boolean }>(({ loadingIcon }) => ({
   borderRadius: 12,
@@ -56,7 +56,7 @@ type CardIconProps = {
 };
 
 export const CardIcon: React.FC<CardIconProps> = ({ iconUrlSrc, iconName, filename }) => {
-  const svgWrapperId = iconName.replace(/ /g, "-");
+  const svgWrapperId = useId();
 
   const [hover, setHover] = useState(false);
   const [loadingIcon, setLoadingIcon] = useState(true);
@@ -76,7 +76,7 @@ export const CardIcon: React.FC<CardIconProps> = ({ iconUrlSrc, iconName, filena
         }
       };
     }
-  }, [iconName]);
+  }, [iconName, svgWrapperId, iconUrlSrc]);
 
   return (
     <Wrapper

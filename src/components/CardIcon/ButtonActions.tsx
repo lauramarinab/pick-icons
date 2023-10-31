@@ -1,9 +1,7 @@
-import styled from "@emotion/styled";
-import { motion } from "framer-motion";
 import { useSnackbar } from "../../context/snackbar-context";
-import { theme } from "../../theme/tokens";
-import { gtmEvent } from "../../utils/gtm-tracking";
 import { trackFullstoryEvent } from "../../utils/fullstory-tracking";
+import { gtmEvent } from "../../utils/gtm-tracking";
+import { Button } from "../Button";
 
 type CopyButtonProps = {
   iconUrlSrc: string;
@@ -25,29 +23,22 @@ export const CopyButton: React.FC<CopyButtonProps> = ({ iconUrlSrc, filename }) 
       if (xhr.status !== 200) {
         onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
       } else {
-        navigator.clipboard
-          .writeText(xhr.response)
-          .then(function () {
-            onOpenSnackbar("notification", `Great, SVG copied correctly! 📄`);
-          })
-          .catch(function () {
-            onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
-          });
+        const textarea = document.createElement("textarea");
+        textarea.value = xhr.response.replace(`<?xml version="1.0" encoding="UTF-8"?>`, "");
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "absolute";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        onOpenSnackbar("notification", `SVG copied to clipboard! 📄`);
       }
     };
   };
 
-  return (
-    <Button
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.25, delay: 0.2 }}
-      onClick={() => onCopySvg()}
-    >
-      Copy SVG
-    </Button>
-  );
+  return <Button onPress={() => onCopySvg()}>Copy SVG</Button>;
 };
 
 type DownloadButtonProps = {
@@ -72,22 +63,12 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ filename, iconUr
       } else {
         const blob = new Blob([xhr.response], { type: "svg" });
         downloadBlob(blob, filename);
-        onOpenSnackbar("notification", `WoW, SVG downloaded correctly! 💪🏼`);
+        onOpenSnackbar("notification", `SVG downloaded correctly! 💪🏼`);
       }
     };
   };
 
-  return (
-    <Button
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.25, delay: 0.2 }}
-      onClick={() => onDownloadIcon()}
-    >
-      Download
-    </Button>
-  );
+  return <Button onPress={() => onDownloadIcon()}>Download</Button>;
 };
 
 const downloadBlob = (blob: Blob, filename: string) => {
@@ -98,16 +79,3 @@ const downloadBlob = (blob: Blob, filename: string) => {
   a.download = filename || "download";
   a.click();
 };
-
-const Button = styled(motion.button)({
-  width: "100%",
-  height: "100%",
-  maxHeight: "45px",
-  transition: "all 200ms",
-  background: "rgba(13, 71, 161, 0.35)",
-  color: theme.colors.white,
-  borderRadius: 8,
-  ":hover, :focus, :focus-visible": {
-    background: "rgba(13, 71, 161, 0.80)",
-  },
-});
