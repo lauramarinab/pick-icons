@@ -32,22 +32,16 @@ export const SnackbarProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   useEffect(() => {
-    if (visible && messageType === "notification") {
+    if (visible) {
       timeout.current = setTimeout(() => {
         onClose();
-      }, 6000);
+      }, 5000);
     }
-  }, [visible, messageType]);
 
-  useEffect(() => {
-    document.body.addEventListener("click", onClose, true);
     return () => {
-      document.body.removeEventListener("click", onClose, true);
-      if (timeout.current && messageType === "notification") {
-        clearTimeout(timeout.current);
-      }
+      if (timeout.current) clearTimeout(timeout.current);
     };
-  }, [messageType]);
+  }, [visible, messageType]);
 
   return (
     <SnackbarContext.Provider value={{ visible, messageType, message, onOpenSnackbar, onClose }}>

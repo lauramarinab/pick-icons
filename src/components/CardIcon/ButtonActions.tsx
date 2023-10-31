@@ -2,6 +2,7 @@ import { useSnackbar } from "../../context/snackbar-context";
 import { trackFullstoryEvent } from "../../utils/fullstory-tracking";
 import { gtmEvent } from "../../utils/gtm-tracking";
 import { Button } from "../Button";
+import { copyToClipboard } from "./helper";
 
 type CopyButtonProps = {
   iconUrlSrc: string;
@@ -23,17 +24,10 @@ export const CopyButton: React.FC<CopyButtonProps> = ({ iconUrlSrc, filename }) 
       if (xhr.status !== 200) {
         onOpenSnackbar("error", "Mmh, oops! Something went wrong.");
       } else {
-        const textarea = document.createElement("textarea");
-        textarea.value = xhr.response.replace(`<?xml version="1.0" encoding="UTF-8"?>`, "");
-        textarea.setAttribute("readonly", "");
-        textarea.style.position = "absolute";
-        textarea.style.left = "-9999px";
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-
-        onOpenSnackbar("notification", `SVG copied to clipboard! 📄`);
+        copyToClipboard({
+          value: xhr.response.replace(`<?xml version="1.0" encoding="UTF-8"?>`, ""),
+          onCopied: () => onOpenSnackbar("notification", `SVG copied to clipboard! 📄`),
+        });
       }
     };
   };

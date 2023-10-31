@@ -11,7 +11,10 @@ const fontFamily = {
   cursive: "'MuseoModerno', cursive",
 };
 
+const breakpoints = { tablet: "min-width: 768px", laptop: "min-width: 960px", desktop: "min-width: 1024px" };
+
 export const theme = {
   colors,
   fontFamily,
+  breakpoints,
 };
