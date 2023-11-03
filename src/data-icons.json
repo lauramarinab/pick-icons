@@ -342,7 +342,7 @@
         "filename": "beer-outline.svg",
         "categories": ["outline", "foods"],
         "urlSrc": "/svg/outline/foods/beer.svg",
-        "metadata": ["beer"]
+        "metadata": ["beer", "birra", "food", "bevande"]
       },
       {
         "name": "fries",
