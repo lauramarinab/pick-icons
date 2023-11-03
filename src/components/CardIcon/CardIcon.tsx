@@ -137,8 +137,8 @@ const SvgWrapper = styled(motion.div)({
   alignItems: "center",
   justifyContent: "center",
   svg: {
-    height: 24,
-    width: 24,
+    height: 30,
+    width: 30,
   },
   "@media (max-width: 960px)": {
     width: 35,

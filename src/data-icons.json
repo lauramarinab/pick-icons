@@ -202,7 +202,7 @@
         "filename": "octopus-outline.svg",
         "categories": ["outline", "sea"],
         "urlSrc": "/svg/outline/sea/octopus.svg",
-        "metadata": ["octopus", "sea", "mare"]
+        "metadata": ["octopus", "sea", "mare", "polpo"]
       },
       {
         "name": "sail boat",
@@ -377,28 +377,28 @@
         "filename": "empty-heart-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/empty-heart.svg",
-        "metadata": ["empty-heart", "love", "cuore", "amore"]
+        "metadata": ["empty-heart", "love", "cuore", "amore", "preferito"]
       },
       {
         "name": "full heart",
         "filename": "full-heart-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/full-heart.svg",
-        "metadata": ["full-heart", "love", "cuore", "amore"]
+        "metadata": ["full-heart", "love", "cuore", "amore", "preferito"]
       },
       {
         "name": "moon",
         "filename": "moon-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/moon.svg",
-        "metadata": ["moon", "dark", "luna", "theme"]
+        "metadata": ["moon", "dark", "luna", "theme", "tema"]
       },
       {
         "name": "sun",
         "filename": "sun-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/sun.svg",
-        "metadata": ["sun", "light", "sole", "theme"]
+        "metadata": ["sun", "light", "sole", "theme", "tema"]
       },
       {
         "name": "chestnut",
@@ -419,14 +419,14 @@
         "filename": "user-minus-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/user-minus.svg",
-        "metadata": ["user-minus", "utente", "meno", "togli", "minus"]
+        "metadata": ["user-minus", "utente", "meno", "togli", "minus", "rimuovere"]
       },
       {
         "name": "user plus",
         "filename": "user-plus-outline.svg",
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/user-plus.svg",
-        "metadata": ["user-plus", "utente", "aggiungi", "più", "plus"]
+        "metadata": ["user-plus", "utente", "aggiungi", "più", "plus", "aggiungere"]
       },
       {
         "name": "user",
@@ -441,8 +441,176 @@
         "categories": ["outline", "objects"],
         "urlSrc": "/svg/outline/objects/users.svg",
         "metadata": ["users", "utenti"]
+      },
+      {
+        "name": "computer",
+        "filename": "computer-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/computer.svg",
+        "metadata": ["computer", "device", "imac", "pc"]
+      },
+      {
+        "name": "graphics tablet",
+        "filename": "graphics-tablet-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/graphics-tablet.svg",
+        "metadata": ["graphics-tablet", "tavoletta grafica", "device"]
+      },
+      {
+        "name": "laptop",
+        "filename": "laptop-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/laptop.svg",
+        "metadata": ["laptop", "device", "mac book", "computer", "pc"]
+      },
+      {
+        "name": "mouse 1",
+        "filename": "mouse-1-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/mouse-1.svg",
+        "metadata": ["mouse", "device"]
+      },
+      {
+        "name": "mouse 2",
+        "filename": "mouse-2-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/mouse-2.svg",
+        "metadata": ["mouse", "wireless mouse", "wireless", "device"]
+      },
+      {
+        "name": "mouse 3",
+        "filename": "mouse-3-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/mouse-3.svg",
+        "metadata": ["mouse", "device", "wired mouse"]
+      },
+      {
+        "name": "mouse 4",
+        "filename": "mouse-4-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/mouse-4.svg",
+        "metadata": ["mouse", "device", "apple mouse"]
+      },
+      {
+        "name": "phone",
+        "filename": "phone-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/phone.svg",
+        "metadata": ["phone", "telefono", "device", "apple"]
+      },
+      {
+        "name": "tablet",
+        "filename": "tablet-outline.svg",
+        "categories": ["outline", "device"],
+        "urlSrc": "/svg/outline/device/tablet.svg",
+        "metadata": ["tablet", "device", "apple"]
+      },
+      {
+        "name": "cassette tape",
+        "filename": "cassette-tape-outline.svg",
+        "categories": ["outline", "music"],
+        "urlSrc": "/svg/outline/music/cassette-tape.svg",
+        "metadata": ["cassette-tape", "cassetta", "musica", "music"]
+      },
+      {
+        "name": "cd",
+        "filename": "cd-outline.svg",
+        "categories": ["outline", "music"],
+        "urlSrc": "/svg/outline/music/cd.svg",
+        "metadata": ["cd", "music", "musica"]
+      },
+      {
+        "name": "headphones",
+        "filename": "headphones-outline.svg",
+        "categories": ["outline", "music"],
+        "urlSrc": "/svg/outline/music/headphones.svg",
+        "metadata": ["headphones", "music", "musica", "cuffie"]
+      },
+      {
+        "name": "musical note",
+        "filename": "musical-note-outline.svg",
+        "categories": ["outline", "music"],
+        "urlSrc": "/svg/outline/music/musical-note.svg",
+        "metadata": ["musical-note", "music", "nota musicale"]
+      },
+      {
+        "name": "calendar 1",
+        "filename": "calendar-1-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/calendar-1.svg",
+        "metadata": ["calendar", "calendario"]
+      },
+      {
+        "name": "calendar 2",
+        "filename": "calendar-2-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/calendar-2.svg",
+        "metadata": ["calendar", "calendario"]
+      },
+      {
+        "name": "floppy",
+        "filename": "floppy-outline.svg",
+        "categories": ["outline", "objects"],
+        "urlSrc": "/svg/outline/objects/floppy.svg",
+        "metadata": ["floppy", "disk", "object"]
+      },
+      {
+        "name": "browser",
+        "filename": "browser-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/browser.svg",
+        "metadata": ["browser", "tech"]
+      },
+      {
+        "name": "folder download",
+        "filename": "folder-download-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/folder-download.svg",
+        "metadata": ["folder-download", "tech", "cartella", "scaricare"]
+      },
+      {
+        "name": "folder favorite open",
+        "filename": "folder-favorite-open-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/folder-favorite-open.svg",
+        "metadata": ["folder-favorite-open", "tech", "cartella", "preferito", "aperta"]
+      },
+      {
+        "name": "folder favorite",
+        "filename": "folder-favorite-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/folder-favorite.svg",
+        "metadata": ["folder-favorite", "tech", "cartella", "preferito"]
+      },
+      {
+        "name": "folder minus",
+        "filename": "folder-minus-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/folder-minus.svg",
+        "metadata": ["folder-minus", "tech", "cartella", "togli", "rimuovere"]
+      },
+      {
+        "name": "folder open",
+        "filename": "folder-open-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/folder-open.svg",
+        "metadata": ["folder-open", "tech", "cartella", "aperta"]
+      },
+      {
+        "name": "folder plus",
+        "filename": "folder-plus-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/folder-plus.svg",
+        "metadata": ["folder-plus", "tech", "più", "cartella", "aggiungi", "aggiungere"]
+      },
+      {
+        "name": "folder",
+        "filename": "folder-outline.svg",
+        "categories": ["outline", "tech"],
+        "urlSrc": "/svg/outline/tech/folder.svg",
+        "metadata": ["folder", "tech", "cartella"]
       }
     ],
-    "categories_count": 5
+    "categories_count": 8
   }
 }
